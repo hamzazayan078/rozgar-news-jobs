@@ -31,6 +31,8 @@ jobs:
         run: |
           git config user.name "job-magic-bot"
           git config user.email "job-magic-bot@users.noreply.github.com"
-          git add docs/jobs.json docs/index.html state/ output/posts/ output/posters/
+          git add -A docs/
+          [ -d state ] && git add -A state/ || true
+          [ -d output ] && git add -A output/ || true
           git diff --cached --quiet || git commit -m "chore: auto-update live jobs feed"
           git push
