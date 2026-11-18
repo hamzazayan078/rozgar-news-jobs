@@ -1,0 +1,36 @@
+name: Auto Fetch & Publish Magic Jobs
+
+on:
+  schedule:
+    - cron: "0 */6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fetch-and-update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run Auto Job Magic Engine
+        env:
+          SITE_URL: "https://rozgarnewshub.blogspot.com"
+        run: |
+          python auto_job_magic.py --limit 15 --max-posts 3
+
+      - name: Commit updated jobs.json and state
+        run: |
+          git config user.name "job-magic-bot"
+          git config user.email "job-magic-bot@users.noreply.github.com"
+          git add docs/jobs.json docs/index.html state/ output/posts/ output/posters/
+          git diff --cached --quiet || git commit -m "chore: auto-update live jobs feed"
+          git push
