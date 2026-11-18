@@ -1,1 +1,264 @@
-{}
+{
+  "site_name": "Rozgar News",
+  "site_url": "https://rozgarnewshub.blogspot.com",
+  "generated_at": "2026-11-18T23:22:12.819351+00:00",
+  "total_jobs": 6,
+  "jobs": [
+    {
+      "id": "5d09d6c74a580072",
+      "source": "SampleFeed",
+      "title": "Junior Python Automation Developer (Remote)",
+      "company": "CloudScale Labs",
+      "company_logo": "",
+      "url": "https://remotive.com/remote-jobs/software-dev",
+      "category": "Software Development",
+      "job_type": "Full Time",
+      "location": "Worldwide (Remote)",
+      "remote": true,
+      "salary": "$1,200 - $1,800/mo",
+      "published_at": "2026-11-18T23:22:12.816382+00:00",
+      "summary": "We are hiring a Junior Python Developer to build clean API integrations and JSON data pipelines. Python 3 & REST APIs Git & basic SQL Async remote communication",
+      "description_html": "<p>We are hiring a <strong>Junior Python Developer</strong> to build clean API integrations and JSON data pipelines.</p><ul><li>Python 3 &amp; REST APIs</li><li>Git &amp; basic SQL</li><li>Async remote communication</li></ul>",
+      "tags": [
+        "Python",
+        "API",
+        "SQL",
+        "Remote"
+      ],
+      "ats_keywords": [
+        "Python",
+        "API",
+        "SQL",
+        "Remote",
+        "GIT"
+      ],
+      "trust": {
+        "score": 95,
+        "label": "Verified Safe",
+        "level": "high",
+        "reasons": [
+          "HTTPS verified source link",
+          "Named employer"
+        ]
+      },
+      "cover_pitch": "Subject: Application for Junior Python Automation Developer (Remote) — Ready to Contribute\n\nHi CloudScale Labs Hiring Team,\n\nI noticed your opening for Junior Python Automation Developer (Remote) and would love to apply. I bring practical experience with Python, API, SQL, and I focus on delivering reliable, measurable results with clear communication.\n\nI have attached my resume and relevant work samples for your review. Looking forward to a brief conversation.\n\nBest regards,\n[Your Name]\n[Your Portfolio / LinkedIn]",
+      "interview_questions": [
+        "Walk me through a real project where you applied Python for a Junior Python Automation Developer (Remote) style problem.",
+        "How do you prioritize urgent tasks and communicate blockers when working with a remote or fast-paced team?",
+        "What metric or quality check do you rely on most to verify your work before submitting it?"
+      ]
+    },
+    {
+      "id": "e1445dc4c0a76305",
+      "source": "SampleFeed",
+      "title": "Customer Support Specialist (English Chat & Email)",
+      "company": "HelpDesk Pro",
+      "company_logo": "",
+      "url": "https://remotive.com/remote-jobs/customer-support",
+      "category": "Customer Support",
+      "job_type": "Full Time",
+      "location": "Remote - Asia / Europe",
+      "remote": true,
+      "salary": "$900 - $1,300/mo",
+      "published_at": "2026-11-18T23:22:12.816382+00:00",
+      "summary": "Join our friendly remote support team assisting SaaS users over email and live chat. Clear written English Experience with CRM or helpdesk tools",
+      "description_html": "<p>Join our friendly remote support team assisting SaaS users over email and live chat.</p><ul><li>Clear written English</li><li>Experience with CRM or helpdesk tools</li></ul>",
+      "tags": [
+        "Customer Support",
+        "SaaS",
+        "Remote"
+      ],
+      "ats_keywords": [
+        "Customer Support",
+        "SaaS",
+        "Remote"
+      ],
+      "trust": {
+        "score": 95,
+        "label": "Verified Safe",
+        "level": "high",
+        "reasons": [
+          "HTTPS verified source link",
+          "Named employer"
+        ]
+      },
+      "cover_pitch": "Subject: Application for Customer Support Specialist (English Chat & Email) — Ready to Contribute\n\nHi HelpDesk Pro Hiring Team,\n\nI noticed your opening for Customer Support Specialist (English Chat & Email) and would love to apply. I bring practical experience with Customer Support, SaaS, Remote, and I focus on delivering reliable, measurable results with clear communication.\n\nI have attached my resume and relevant work samples for your review. Looking forward to a brief conversation.\n\nBest regards,\n[Your Name]\n[Your Portfolio / LinkedIn]",
+      "interview_questions": [
+        "Walk me through a real project where you applied Customer Support for a Customer Support Specialist (English Chat & Email) style problem.",
+        "How do you prioritize urgent tasks and communicate blockers when working with a remote or fast-paced team?",
+        "What metric or quality check do you rely on most to verify your work before submitting it?"
+      ]
+    },
+    {
+      "id": "5a5b8452c01d2777",
+      "source": "SampleFeed",
+      "title": "SEO Content Writer & WordPress Assistant",
+      "company": "RankBoost Media",
+      "company_logo": "",
+      "url": "https://remotive.com/remote-jobs/writing",
+      "category": "Marketing & SEO",
+      "job_type": "Contract",
+      "location": "Worldwide (Remote)",
+      "remote": true,
+      "salary": "$700 - $1,100/mo",
+      "published_at": "2026-11-18T23:22:12.816382+00:00",
+      "summary": "Looking for a detail-oriented SEO writer to draft clean tutorials and manage WordPress formatting. Keyword research HTML basics & Canva",
+      "description_html": "<p>Looking for a detail-oriented SEO writer to draft clean tutorials and manage WordPress formatting.</p><ul><li>Keyword research</li><li>HTML basics &amp; Canva</li></ul>",
+      "tags": [
+        "SEO",
+        "WordPress",
+        "Copywriting",
+        "Canva"
+      ],
+      "ats_keywords": [
+        "SEO",
+        "WordPress",
+        "Copywriting",
+        "Canva",
+        "Html"
+      ],
+      "trust": {
+        "score": 95,
+        "label": "Verified Safe",
+        "level": "high",
+        "reasons": [
+          "HTTPS verified source link",
+          "Named employer"
+        ]
+      },
+      "cover_pitch": "Subject: Application for SEO Content Writer & WordPress Assistant — Ready to Contribute\n\nHi RankBoost Media Hiring Team,\n\nI noticed your opening for SEO Content Writer & WordPress Assistant and would love to apply. I bring practical experience with SEO, WordPress, Copywriting, and I focus on delivering reliable, measurable results with clear communication.\n\nI have attached my resume and relevant work samples for your review. Looking forward to a brief conversation.\n\nBest regards,\n[Your Name]\n[Your Portfolio / LinkedIn]",
+      "interview_questions": [
+        "Walk me through a real project where you applied SEO for a SEO Content Writer & WordPress Assistant style problem.",
+        "How do you prioritize urgent tasks and communicate blockers when working with a remote or fast-paced team?",
+        "What metric or quality check do you rely on most to verify your work before submitting it?"
+      ]
+    },
+    {
+      "id": "bec95d22e095b9b5",
+      "source": "SampleFeed",
+      "title": "UI/UX & Social Media Graphic Designer",
+      "company": "PixelCraft Studio",
+      "company_logo": "",
+      "url": "https://remotive.com/remote-jobs/design",
+      "category": "Design",
+      "job_type": "Part Time",
+      "location": "Remote",
+      "remote": true,
+      "salary": "$800 - $1,400/mo",
+      "published_at": "2026-11-18T23:22:12.816382+00:00",
+      "summary": "Create crisp landing page concepts in Figma and high-engagement social graphics. Figma & Photoshop Clean typography sense",
+      "description_html": "<p>Create crisp landing page concepts in Figma and high-engagement social graphics.</p><ul><li>Figma &amp; Photoshop</li><li>Clean typography sense</li></ul>",
+      "tags": [
+        "Figma",
+        "UI/UX",
+        "Photoshop",
+        "Canva"
+      ],
+      "ats_keywords": [
+        "Figma",
+        "UI/UX",
+        "Photoshop",
+        "Canva"
+      ],
+      "trust": {
+        "score": 95,
+        "label": "Verified Safe",
+        "level": "high",
+        "reasons": [
+          "HTTPS verified source link",
+          "Named employer"
+        ]
+      },
+      "cover_pitch": "Subject: Application for UI/UX & Social Media Graphic Designer — Ready to Contribute\n\nHi PixelCraft Studio Hiring Team,\n\nI noticed your opening for UI/UX & Social Media Graphic Designer and would love to apply. I bring practical experience with Figma, UI/UX, Photoshop, and I focus on delivering reliable, measurable results with clear communication.\n\nI have attached my resume and relevant work samples for your review. Looking forward to a brief conversation.\n\nBest regards,\n[Your Name]\n[Your Portfolio / LinkedIn]",
+      "interview_questions": [
+        "Walk me through a real project where you applied Figma for a UI/UX & Social Media Graphic Designer style problem.",
+        "How do you prioritize urgent tasks and communicate blockers when working with a remote or fast-paced team?",
+        "What metric or quality check do you rely on most to verify your work before submitting it?"
+      ]
+    },
+    {
+      "id": "f2fd76a67374821e",
+      "source": "SampleFeed",
+      "title": "Short-Form Video Editor (Reels & YouTube Shorts)",
+      "company": "CreatorPulse Media",
+      "company_logo": "",
+      "url": "https://remotive.com/remote-jobs/design",
+      "category": "Design",
+      "job_type": "Contract",
+      "location": "Worldwide (Remote)",
+      "remote": true,
+      "salary": "$750 - $1,250/mo",
+      "published_at": "2026-11-18T23:22:12.816382+00:00",
+      "summary": "Edit high-retention vertical videos with clean captions, pacing, and sound effects. Premiere Pro / CapCut Desktop Clean subtitles & audio mixing",
+      "description_html": "<p>Edit high-retention vertical videos with clean captions, pacing, and sound effects.</p><ul><li>Premiere Pro / CapCut Desktop</li><li>Clean subtitles &amp; audio mixing</li></ul>",
+      "tags": [
+        "Video Editing",
+        "Premiere",
+        "Canva"
+      ],
+      "ats_keywords": [
+        "Video Editing",
+        "Premiere",
+        "Canva"
+      ],
+      "trust": {
+        "score": 95,
+        "label": "Verified Safe",
+        "level": "high",
+        "reasons": [
+          "HTTPS verified source link",
+          "Named employer"
+        ]
+      },
+      "cover_pitch": "Subject: Application for Short-Form Video Editor (Reels & YouTube Shorts) — Ready to Contribute\n\nHi CreatorPulse Media Hiring Team,\n\nI noticed your opening for Short-Form Video Editor (Reels & YouTube Shorts) and would love to apply. I bring practical experience with Video Editing, Premiere, Canva, and I focus on delivering reliable, measurable results with clear communication.\n\nI have attached my resume and relevant work samples for your review. Looking forward to a brief conversation.\n\nBest regards,\n[Your Name]\n[Your Portfolio / LinkedIn]",
+      "interview_questions": [
+        "Walk me through a real project where you applied Video Editing for a Short-Form Video Editor (Reels & YouTube Shorts) style problem.",
+        "How do you prioritize urgent tasks and communicate blockers when working with a remote or fast-paced team?",
+        "What metric or quality check do you rely on most to verify your work before submitting it?"
+      ]
+    },
+    {
+      "id": "4c1d4d0c2c021188",
+      "source": "SampleFeed",
+      "title": "Remote Virtual Assistant & E-Commerce Operations",
+      "company": "NorthStar Commerce",
+      "company_logo": "",
+      "url": "https://remotive.com/remote-jobs/all-others",
+      "category": "Operations & VA",
+      "job_type": "Full Time",
+      "location": "Asia / Europe (Remote)",
+      "remote": true,
+      "salary": "$650 - $1,000/mo",
+      "published_at": "2026-11-18T23:22:12.816382+00:00",
+      "summary": "Support our online storefront operations remotely with clean daily reporting. Shopify & Excel / Google Sheets Order tracking & customer emails",
+      "description_html": "<p>Support our online storefront operations remotely with clean daily reporting.</p><ul><li>Shopify &amp; Excel / Google Sheets</li><li>Order tracking &amp; customer emails</li></ul>",
+      "tags": [
+        "Virtual Assistant",
+        "Shopify",
+        "Excel",
+        "Data Entry"
+      ],
+      "ats_keywords": [
+        "Virtual Assistant",
+        "Shopify",
+        "Excel",
+        "Data Entry"
+      ],
+      "trust": {
+        "score": 95,
+        "label": "Verified Safe",
+        "level": "high",
+        "reasons": [
+          "HTTPS verified source link",
+          "Named employer"
+        ]
+      },
+      "cover_pitch": "Subject: Application for Remote Virtual Assistant & E-Commerce Operations — Ready to Contribute\n\nHi NorthStar Commerce Hiring Team,\n\nI noticed your opening for Remote Virtual Assistant & E-Commerce Operations and would love to apply. I bring practical experience with Virtual Assistant, Shopify, Excel, and I focus on delivering reliable, measurable results with clear communication.\n\nI have attached my resume and relevant work samples for your review. Looking forward to a brief conversation.\n\nBest regards,\n[Your Name]\n[Your Portfolio / LinkedIn]",
+      "interview_questions": [
+        "Walk me through a real project where you applied Virtual Assistant for a Remote Virtual Assistant & E-Commerce Operations style problem.",
+        "How do you prioritize urgent tasks and communicate blockers when working with a remote or fast-paced team?",
+        "What metric or quality check do you rely on most to verify your work before submitting it?"
+      ]
+    }
+  ]
+}
