@@ -872,7 +872,7 @@
     var CONFIG = {
       siteName: "Rozgar News",
       siteUrl: "https://rozgarnewshub.blogspot.com",
-      externalFeedUrl: "https://raw.githubusercontent.com/hamzazayan078/rozgar-news-jobs/main/docs/jobs.json",
+      externalFeedUrl: "https://hamzazayan078.github.io/rozgar-news-jobs/jobs.json",
       bloggerFeedUrl: "/feeds/posts/default?alt=json&max-results=40",
       communityAlertUrl: "#scam-shield-tool", // Put your WhatsApp or Telegram Channel link here
       cvOrderUrl: "#ats-helper-tool", // Put "https://wa.me/923XXXXXXXXX?text=I%20want%20ATS%20CV" here
@@ -1157,12 +1157,23 @@
           var extRes = await fetch(CONFIG.externalFeedUrl);
           if (extRes.ok) {
             var extJson = await extRes.json();
-            if (Array.isArray(extJson.jobs)) {
+            if (Array.isArray(extJson.jobs) && extJson.jobs.length > 0) {
               merged = merged.concat(extJson.jobs);
               sourcesUsed.push("Live Auto-Feed (" + extJson.jobs.length + ")");
             }
           }
-        } catch (err) { /* Graceful fallback below */ }
+        } catch (err) {
+          try {
+            var rawRes = await fetch("https://raw.githubusercontent.com/hamzazayan078/rozgar-news-jobs/main/docs/jobs.json");
+            if (rawRes.ok) {
+              var rawJson = await rawRes.json();
+              if (Array.isArray(rawJson.jobs) && rawJson.jobs.length > 0) {
+                merged = merged.concat(rawJson.jobs);
+                sourcesUsed.push("Raw Cloud Feed (" + rawJson.jobs.length + ")");
+              }
+            }
+          } catch (e2) {}
+        }
       }
 
       try {
