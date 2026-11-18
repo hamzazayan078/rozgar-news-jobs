@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rozgar News — 1-Click PNG Social Job Poster Studio</title>
+  <style>
+    :root { --bg: #070b14; --card: #0f172a; --border: #1e293b; --brand: #059669; --text: #f8fafc; --muted: #94a3b8; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); padding: 24px; }
+    .wrap { max-width: 1180px; margin: 0 auto; }
+    header { display: flex; justify-content: space-between; align-items: center; gap: 14px; flex-wrap: wrap; margin-bottom: 22px; }
+    h1 { margin: 0; font-size: 1.5rem; }
+    .sub { color: var(--muted); font-size: 0.9rem; margin-top: 4px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 18px; }
+    .card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 16px; display: flex; flex-direction: column; gap: 12px; }
+    canvas { width: 100%; height: auto; border-radius: 10px; border: 1px solid var(--border); display: block; }
+    .actions { display: flex; gap: 8px; flex-wrap: wrap; }
+    button { flex: 1; background: var(--brand); color: #fff; border: none; padding: 10px 12px; border-radius: 9px; font-weight: 700; cursor: pointer; font: inherit; font-size: 0.86rem; }
+    button.alt { background: #1e293b; color: #e2e8f0; border: 1px solid #334155; }
+    button:hover { opacity: 0.92; }
+    pre { margin: 0; background: #020617; color: #cbd5e1; padding: 10px; border-radius: 8px; font-size: 0.78rem; white-space: pre-wrap; max-height: 115px; overflow-y: auto; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div>
+        <h1>Rozgar News — 1-Click 1080×1350 PNG Poster &amp; Caption Studio</h1>
+        <div class="sub" id="status">Loading jobs from ./jobs.json...</div>
+      </div>
+      <a href="./index.html" style="color:#34d399;text-decoration:none;font-weight:700;">&larr; Back to Job Board Preview</a>
+    </header>
+    <div class="grid" id="grid"></div>
+  </div>
+
+  <script>
+    (function () {
+      "use strict";
+      var SITE_DOMAIN = "rozgarnewshub.blogspot.com";
+      var SITE_URL = "https://" + SITE_DOMAIN;
+
+      function wrapLines(ctx, text, maxWidth, maxLines) {
+        var words = String(text || "").split(/\s+/);
+        var lines = [];
+        var line = "";
+        for (var i = 0; i < words.length; i++) {
+          var test = line ? (line + " " + words[i]) : words[i];
+          if (ctx.measureText(test).width > maxWidth && line) {
+            lines.push(line);
+            line = words[i];
+            if (lines.length === maxLines - 1) break;
+          } else {
+            line = test;
+          }
+        }
+        if (line && lines.length < maxLines) lines.push(line);
+        return lines;
+      }
+
+      function drawRoundRect(ctx, x, y, w, h, r) {
+        ctx.beginPath();
+        ctx.moveTo(x + r, y);
+        ctx.arcTo(x + w, y, x + w, y + h, r);
+        ctx.arcTo(x + w, y + h, x, y + h, r);
+        ctx.arcTo(x, y + h, x, y, r);
+        ctx.arcTo(x, y, x + w, y, r);
+        ctx.closePath();
+      }
+
+      function renderPosterCanvas(job) {
+        var canvas = document.createElement("canvas");
+        canvas.width = 1080;
+        canvas.height = 1350;
+        var ctx = canvas.getContext("2d");
+
+        var grad = ctx.createLinearGradient(0, 0, 1080, 1350);
+        grad.addColorStop(0, "#070b14");
+        grad.addColorStop(1, "#111c36");
+        ctx.fillStyle = grad;
+        ctx.fillRect(0, 0, 1080, 1350);
+
+        drawRoundRect(ctx, 56, 56, 968, 1238, 36);
+        ctx.fillStyle = "#0f172a";
+        ctx.fill();
+        ctx.strokeStyle = "#1e293b";
+        ctx.lineWidth = 4;
+        ctx.stroke();
+
+        // Verified badge
+        drawRoundRect(ctx, 90, 110, 450, 58, 29);
+        ctx.fillStyle = "#064e3b";
+        ctx.fill();
+        ctx.strokeStyle = "#10b981";
+        ctx.lineWidth = 2;
+        ctx.stroke();
+        ctx.fillStyle = "#6ee7b7";
+        ctx.font = "bold 24px Arial, sans-serif";
+        ctx.textAlign = "center";
+        var trustScore = (job.trust && job.trust.score) ? job.trust.score : 90;
+        ctx.fillText("WE ARE HIRING • VERIFIED " + trustScore + "%", 315, 148);
+
+        // Company
+        ctx.textAlign = "left";
+        ctx.fillStyle = "#60a5fa";
+        ctx.font = "bold 36px Arial, sans-serif";
+        ctx.fillText(String(job.company || "Verified Employer").slice(0, 34), 90, 245);
+
+        // Title
+        ctx.fillStyle = "#ffffff";
+        ctx.font = "bold 58px Arial, sans-serif";
+        var titleLines = wrapLines(ctx, job.title, 900, 3);
+        titleLines.forEach(function (ln, i) {
+          ctx.fillText(ln, 90, 340 + i * 74);
+        });
+
+        // Location & Salary Box
+        drawRoundRect(ctx, 90, 600, 900, 185, 24);
+        ctx.fillStyle = "rgba(23, 37, 84, 0.72)";
+        ctx.fill();
+        ctx.fillStyle = "#93c5fd";
+        ctx.font = "bold 24px Arial, sans-serif";
+        ctx.fillText("LOCATION, TYPE & PAY", 125, 655);
+        ctx.fillStyle = "#f8fafc";
+        ctx.font = "bold 34px Arial, sans-serif";
+        ctx.fillText(((job.location || "Remote") + " • " + (job.job_type || "Full Time")).slice(0, 40), 125, 708);
+        ctx.fillStyle = "#34d399";
+        ctx.font = "bold 28px Arial, sans-serif";
+        ctx.fillText((job.salary || "Apply directly for compensation details").slice(0, 44), 125, 756);
+
+        // Skills pills
+        ctx.fillStyle = "#94a3b8";
+        ctx.font = "bold 24px Arial, sans-serif";
+        ctx.fillText("TOP ATS SKILLS TO INCLUDE", 90, 845);
+        var skills = (job.ats_keywords && job.ats_keywords.length) ? job.ats_keywords : [job.category || "Remote"];
+        skills.slice(0, 3).forEach(function (sk, idx) {
+          var x = 90 + idx * 305;
+          drawRoundRect(ctx, x, 870, 285, 62, 31);
+          ctx.fillStyle = "#1e293b";
+          ctx.fill();
+          ctx.strokeStyle = "#334155";
+          ctx.lineWidth = 2;
+          ctx.stroke();
+          ctx.fillStyle = "#e2e8f0";
+          ctx.font = "bold 24px Arial, sans-serif";
+          ctx.textAlign = "center";
+          ctx.fillText(String(sk).slice(0, 15), x + 142, 910);
+        });
+
+        // Green CTA Box
+        drawRoundRect(ctx, 90, 985, 900, 185, 28);
+        ctx.fillStyle = "#059669";
+        ctx.fill();
+        ctx.textAlign = "center";
+        ctx.fillStyle = "#ffffff";
+        ctx.font = "bold 40px Arial, sans-serif";
+        ctx.fillText("Apply Link + Cover Email Ready!", 540, 1062);
+        ctx.fillStyle = "#ecfdf5";
+        ctx.font = "bold 34px Arial, sans-serif";
+        ctx.fillText("Visit: " + SITE_DOMAIN, 540, 1122);
+
+        // Footer
+        ctx.fillStyle = "#64748b";
+        ctx.font = "22px Arial, sans-serif";
+        ctx.fillText("Scam-Shield Verified • Never Pay Any Registration Fee", 540, 1242);
+
+        return canvas;
+      }
+
+      function buildCaption(job) {
+        var skills = (job.ats_keywords || []).slice(0, 4).join(", ");
+        return [
+          "NEW VERIFIED OPENING (" + ((job.trust && job.trust.score) || 90) + "/100 Trust Score)",
+          "",
+          "Role: " + job.title,
+          "Company: " + job.company,
+          "Location: " + (job.location || "Remote") + " (" + (job.job_type || "Full Time") + ")",
+          job.salary ? ("Salary: " + job.salary) : "",
+          skills ? ("ATS Keywords: " + skills) : "",
+          "",
+          "Direct Official Apply Link + Free Ready Cover Email:",
+          SITE_URL,
+          "",
+          "#RemoteJobs #RozgarNews #HiringNow #OnlineJobs"
+        ].filter(Boolean).join("\n");
+      }
+
+      async function init() {
+        var status = document.getElementById("status");
+        var grid = document.getElementById("grid");
+        var jobs = [];
+        try {
+          var res = await fetch("./jobs.json");
+          if (res.ok) {
+            var data = await res.json();
+            jobs = Array.isArray(data.jobs) ? data.jobs : [];
+          }
+        } catch (e) { /* Ignore file:// fetch errors */ }
+
+        if (jobs.length === 0) {
+          status.textContent = "Run a local server (`python -m http.server 8080 -d docs`) or view on GitHub Pages to load live ./jobs.json posters.";
+          return;
+        }
+
+        status.textContent = "Loaded " + jobs.length + " live jobs — Click Download PNG for FB Page / Reels / WhatsApp Channel!";
+        jobs.slice(0, 12).forEach(function (job) {
+          var card = document.createElement("div");
+          card.className = "card";
+          var canvas = renderPosterCanvas(job);
+          var caption = buildCaption(job);
+
+          var pre = document.createElement("pre");
+          pre.textContent = caption;
+
+          var actions = document.createElement("div");
+          actions.className = "actions";
+
+          var dlBtn = document.createElement("button");
+          dlBtn.type = "button";
+          dlBtn.textContent = "Download PNG (1080×1350)";
+          dlBtn.onclick = function () {
+            var a = document.createElement("a");
+            a.download = "rozgar-news-" + (job.id || "job") + ".png";
+            a.href = canvas.toDataURL("image/png");
+            a.click();
+          };
+
+          var cpBtn = document.createElement("button");
+          cpBtn.type = "button";
+          cpBtn.className = "alt";
+          cpBtn.textContent = "Copy FB/WA Caption";
+          cpBtn.onclick = function () {
+            if (navigator.clipboard) {
+              navigator.clipboard.writeText(caption);
+              cpBtn.textContent = "Caption Copied!";
+              setTimeout(function () { cpBtn.textContent = "Copy FB/WA Caption"; }, 1600);
+            }
+          };
+
+          actions.appendChild(dlBtn);
+          actions.appendChild(cpBtn);
+          card.appendChild(canvas);
+          card.appendChild(pre);
+          card.appendChild(actions);
+          grid.appendChild(card);
+        });
+      }
+
+      document.addEventListener("DOMContentLoaded", init);
+    })();
+  </script>
+</body>
+</html>
+
