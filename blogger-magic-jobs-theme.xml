@@ -5,6 +5,8 @@
   <meta charset='UTF-8'/>
   <meta content='width=device-width, initial-scale=1.0' name='viewport'/>
   <!-- MONETAG / ADSTERRA VERIFICATION META TAG: Paste your verification <meta name='monetag' content='...'/> tag right below this line -->
+  <!-- Monetag Multitag (Zone 312287) - Auto Monetization for In-Page Push, Popunder, Vignette & Interstitial -->
+  <script async='async' data-cfasync='false' data-zone='312287' src='https://quge5.com/88/tag.min.js'></script>
   <title>
     <b:if cond='data:view.isHomepage'>
       <data:blog.title/> - Verified Daily Jobs &amp; Career Hub
