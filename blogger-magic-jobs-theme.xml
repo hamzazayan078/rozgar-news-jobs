@@ -653,8 +653,19 @@
       <div class='jm-ad-wrapper' id='jm-ad-top'>
         <span class='jm-ad-label'>Advertisement</span>
         <b:section class='jm-ad-gadget' id='header_ad_section' maxwidgets='2' showaddelement='yes'/>
-        <div class='jm-ad-placeholder'>
-          Zone 1: Adsterra Leaderboard (728x90 / 320x50) &#8212; Add HTML/JS Gadget in Blogger Layout &gt; header_ad_section
+        <div class='adsterra-banner-responsive' style='display:flex;justify-content:center;align-items:center;overflow-x:auto;max-width:100%;margin:6px auto;min-height:90px;'>
+          <script type='text/javascript'>
+          //<![CDATA[
+            atOptions = {
+              'key' : 'd872e9a91466c384b1b126f146a960cf',
+              'format' : 'iframe',
+              'height' : 90,
+              'width' : 728,
+              'params' : {}
+            };
+          //]]>
+          </script>
+          <script src='https://bicea.org/22/d872e9a91466c384b1b126f146a960cf' type='text/javascript'></script>
         </div>
       </div>
 
@@ -674,8 +685,19 @@
           <div class='jm-ad-wrapper' id='jm-ad-mid'>
             <span class='jm-ad-label'>Sponsored &#8226; Advertisement</span>
             <b:section class='jm-ad-gadget' id='infeed_ad_section' maxwidgets='2' showaddelement='yes'/>
-            <div class='jm-ad-placeholder'>
-              Zone 2: Monetag Banner / Adsterra 468x60 &#8212; Add HTML/JS Gadget in Blogger Layout &gt; infeed_ad_section
+            <div class='adsterra-banner-responsive' style='display:flex;justify-content:center;align-items:center;overflow-x:auto;max-width:100%;margin:6px auto;min-height:90px;'>
+              <script type='text/javascript'>
+              //<![CDATA[
+                atOptions = {
+                  'key' : 'd872e9a91466c384b1b126f146a960cf',
+                  'format' : 'iframe',
+                  'height' : 90,
+                  'width' : 728,
+                  'params' : {}
+                };
+              //]]>
+              </script>
+              <script src='https://bicea.org/22/d872e9a91466c384b1b126f146a960cf' type='text/javascript'></script>
             </div>
           </div>
 
@@ -727,12 +749,23 @@
         </aside>
       </div>
 
-      <!-- ZONE 4: ADSTERRA NATIVE BANNER (4x1 Grid blends cleanly above Toolkit) -->
+      <!-- ZONE 4: ADSTERRA BANNER (Above Safety Toolkit) -->
       <div class='jm-ad-wrapper' id='jm-ad-native'>
         <span class='jm-ad-label'>Sponsored Recommendations</span>
         <b:section class='jm-ad-gadget' id='native_ad_section' maxwidgets='2' showaddelement='yes'/>
-        <div class='jm-ad-placeholder'>
-          Zone 4: Adsterra Native Banner (4x1 Grid) &#8212; Highest Clean CTR! Add via Blogger Layout &gt; native_ad_section
+        <div class='adsterra-banner-responsive' style='display:flex;justify-content:center;align-items:center;overflow-x:auto;max-width:100%;margin:6px auto;min-height:90px;'>
+          <script type='text/javascript'>
+          //<![CDATA[
+            atOptions = {
+              'key' : 'd872e9a91466c384b1b126f146a960cf',
+              'format' : 'iframe',
+              'height' : 90,
+              'width' : 728,
+              'params' : {}
+            };
+          //]]>
+          </script>
+          <script src='https://bicea.org/22/d872e9a91466c384b1b126f146a960cf' type='text/javascript'></script>
         </div>
       </div>
 
