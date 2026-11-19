@@ -748,12 +748,25 @@
 
         <!-- RIGHT STICKY SIDEBAR: High-Viewability Dual-Network Ad Zone + Salary PKR Calc -->
         <aside class='jm-sidebar'>
-          <!-- ZONE 3: STICKY SIDEBAR (ADSTERRA 300x250 + MONETAG BANNER) -->
+          <!-- ZONE 3: STICKY SIDEBAR (ADSTERRA 728x90 SCALED BANNER) -->
           <div class='jm-ad-wrapper' id='jm-ad-sidebar' style='margin:0;'>
             <span class='jm-ad-label'>Advertisement</span>
             <b:section class='jm-ad-gadget' id='sidebar_ad_section' maxwidgets='3' showaddelement='yes'/>
-            <div class='jm-ad-placeholder'>
-              Zone 3: Sticky Sidebar (Adsterra 300x250 + Monetag Display) &#8212; Add via Blogger Layout &gt; sidebar_ad_section
+            <div class='adsterra-banner-responsive' style='display:flex;justify-content:center;align-items:center;overflow:hidden;max-width:100%;margin:6px auto;min-height:90px;'>
+              <div style='transform:scale(0.42);transform-origin:left top;width:728px;height:90px;margin-bottom:-50px;'>
+                <script type='text/javascript'>
+                //<![CDATA[
+                  atOptions = {
+                    'key' : 'd872e9a91466c384b1b126f146a960cf',
+                    'format' : 'iframe',
+                    'height' : 90,
+                    'width' : 728,
+                    'params' : {}
+                  };
+                //]]>
+                </script>
+                <script src='https://bicea.org/22/d872e9a91466c384b1b126f146a960cf' type='text/javascript'></script>
+              </div>
             </div>
           </div>
 
@@ -863,16 +876,25 @@
       </b:widget>
     </b:section>
 
-    <!-- ZONE 5: SINGLE POST FOOTER AD (Outside Blog1 so Blogger Layout shows Add a Gadget cleanly) -->
-    <b:if cond='not data:view.isHomepage'>
-      <div class='jm-ad-wrapper' style='max-width:880px;margin:20px auto;'>
-        <span class='jm-ad-label'>Advertisement</span>
-        <b:section class='jm-ad-gadget' id='post_footer_ad_section' maxwidgets='2' showaddelement='yes'/>
-        <div class='jm-ad-placeholder'>
-          Zone 5: Post Footer Ad (Adsterra Native / Monetag) &#8212; Add via Blogger Layout &gt; post_footer_ad_section
-        </div>
+    <!-- ZONE 5: POST FOOTER AD (Adsterra 728x90 Banner) -->
+    <div class='jm-ad-wrapper' style='max-width:880px;margin:24px auto;'>
+      <span class='jm-ad-label'>Advertisement</span>
+      <b:section class='jm-ad-gadget' id='post_footer_ad_section' maxwidgets='2' showaddelement='yes'/>
+      <div class='adsterra-banner-responsive' style='display:flex;justify-content:center;align-items:center;overflow-x:auto;max-width:100%;margin:6px auto;min-height:90px;'>
+        <script type='text/javascript'>
+        //<![CDATA[
+          atOptions = {
+            'key' : 'd872e9a91466c384b1b126f146a960cf',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+          };
+        //]]>
+        </script>
+        <script src='https://bicea.org/22/d872e9a91466c384b1b126f146a960cf' type='text/javascript'></script>
       </div>
-    </b:if>
+    </div>
   </div>
 
   <!-- ZONE 6: GLOBAL AD SCRIPTS (MONETAG IN-PAGE PUSH / ADSTERRA SOCIAL BAR — NON-BLOCKING) -->
@@ -900,8 +922,19 @@
 
       <div class='jm-ad-wrapper' id='jm-modal-ad-slot' style='margin:0 0 14px;'>
         <span class='jm-ad-label'>Sponsored &#8226; Advertisement</span>
-        <div class='jm-ad-placeholder' id='jm-modal-ad-content'>
-          In-Modal Ad Slot &#8212; Supports Adsterra Direct Banner or Affiliate Offer via CONFIG.modalPromo
+        <div class='adsterra-banner-responsive' id='jm-modal-ad-content' style='display:flex;justify-content:center;align-items:center;overflow-x:auto;max-width:100%;margin:6px auto;min-height:90px;'>
+          <script type='text/javascript'>
+          //<![CDATA[
+            atOptions = {
+              'key' : 'd872e9a91466c384b1b126f146a960cf',
+              'format' : 'iframe',
+              'height' : 90,
+              'width' : 728,
+              'params' : {}
+            };
+          //]]>
+          </script>
+          <script src='https://bicea.org/22/d872e9a91466c384b1b126f146a960cf' type='text/javascript'></script>
         </div>
       </div>
 
@@ -1461,7 +1494,31 @@
           adBox.className = "jm-ad-wrapper jm-infeed-ad";
           adBox.innerHTML =
             "<span class='jm-ad-label'>Sponsored &#8226; Advertisement</span>" +
-            "<div class='jm-ad-placeholder'>In-Feed Native Slot &#8212; Non-Intrusive Dual-Network Placement</div>";
+            "<div class='adsterra-banner-responsive' style='display:flex;justify-content:center;align-items:center;overflow-x:auto;max-width:100%;margin:6px auto;min-height:90px;'>" +
+              "<iframe src='about:blank' style='width:728px;height:90px;border:none;overflow:hidden;' scrolling='no'></iframe>" +
+            "</div>";
+          var ifr = adBox.querySelector("iframe");
+          if (ifr && ifr.contentWindow) {
+            try {
+              var doc = ifr.contentWindow.document;
+              doc.open();
+              doc.write(
+                "<!DOCTYPE html><html><head><style>body{margin:0;padding:0;display:flex;justify-content:center;align-items:center;background:transparent;overflow:hidden;}</style></head><body>" +
+                "<script type='text/javascript'>" +
+                "atOptions = {" +
+                  "'key' : 'd872e9a91466c384b1b126f146a960cf'," +
+                  "'format' : 'iframe'," +
+                  "'height' : 90," +
+                  "'width' : 728," +
+                  "'params' : {}" +
+                "};" +
+                "<\/script>" +
+                "<script type='text/javascript' src='https://bicea.org/22/d872e9a91466c384b1b126f146a960cf'><\/script>" +
+                "</body></html>"
+              );
+              doc.close();
+            } catch (err) {}
+          }
           grid.appendChild(adBox);
         }
       });
