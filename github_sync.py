@@ -30,6 +30,7 @@ TIMEOUT_SECONDS = 60
 # Only push source, workflow, docs, state, and README files (skip __pycache__ / local tools).
 SYNC_INCLUDE_PATHS = [
     ".github/workflows/auto-fetch-jobs.yml",
+    "ADSENSE_APPROVAL_GUIDE.md",
     "auto_job_magic.py",
     "blogger-magic-jobs-theme.xml",
     "docs/index.html",
