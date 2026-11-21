@@ -158,3 +158,4 @@ Har page me top-left **Pencil icon (`✏️`) -> HTML view** select karo, Exact 
    - Theme `<head>` se `<script ... quge5.com ...>` (Monetag) aur Blogger **Layout -> Zone 6 (`global_ad_scripts_section`)** se Adsterra Social Bar (`"$50,000 bonus missed call"` widget) **temporarily remove** kar dena jab tak AdSense approve na ho jaye!
    - **Kyun?** AdSense policy popunders aur fake notification banners ke khilaaf strict hai. Approval milne ke baad tumhare paas AdSense khud high-paying safe display ads dega!
 4. **Domain Age & Search Console:** Ensure `sitemap.xml` aur `sitemap-pages.xml` Google Search Console me submitted hain taake yeh 4 naye policy pages bhi Google me index hon.
+
