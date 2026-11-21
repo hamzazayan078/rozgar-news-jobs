@@ -867,20 +867,7 @@
       <div class='jm-ad-wrapper' id='jm-ad-top'>
         <span class='jm-ad-label'>Advertisement</span>
         <b:section class='jm-ad-gadget' id='header_ad_section' maxwidgets='2' showaddelement='yes'/>
-        <div class='adsterra-banner-responsive' style='display:flex;justify-content:center;align-items:center;overflow-x:auto;max-width:100%;margin:6px auto;min-height:90px;'>
-          <script type='text/javascript'>
-          //<![CDATA[
-            atOptions = {
-              'key' : 'd872e9a91466c384b1b126f146a960cf',
-              'format' : 'iframe',
-              'height' : 90,
-              'width' : 728,
-              'params' : {}
-            };
-          //]]>
-          </script>
-          <script src='https://www.highperformanceformat.com/d872e9a91466c384b1b126f146a960cf/invoke.js' type='text/javascript'></script>
-        </div>
+        <div class='adsterra-banner-responsive' id='jm-ad-top-slot' style='display:flex;justify-content:center;align-items:center;overflow-x:auto;max-width:100%;margin:6px auto;min-height:90px;'></div>
       </div>
 
       <div class='jm-layout-grid'>
@@ -899,20 +886,7 @@
           <div class='jm-ad-wrapper' id='jm-ad-mid'>
             <span class='jm-ad-label'>Sponsored &#8226; Advertisement</span>
             <b:section class='jm-ad-gadget' id='infeed_ad_section' maxwidgets='2' showaddelement='yes'/>
-            <div class='adsterra-banner-responsive' style='display:flex;justify-content:center;align-items:center;overflow-x:auto;max-width:100%;margin:6px auto;min-height:90px;'>
-              <script type='text/javascript'>
-              //<![CDATA[
-                atOptions = {
-                  'key' : 'd872e9a91466c384b1b126f146a960cf',
-                  'format' : 'iframe',
-                  'height' : 90,
-                  'width' : 728,
-                  'params' : {}
-                };
-              //]]>
-              </script>
-              <script src='https://www.highperformanceformat.com/d872e9a91466c384b1b126f146a960cf/invoke.js' type='text/javascript'></script>
-            </div>
+            <div class='adsterra-banner-responsive' id='jm-ad-mid-slot' style='display:flex;justify-content:center;align-items:center;overflow-x:auto;max-width:100%;margin:6px auto;min-height:90px;'></div>
           </div>
 
           <div class='jm-pagination' id='jm-pagination'></div>
@@ -924,22 +898,7 @@
           <div class='jm-ad-wrapper' id='jm-ad-sidebar' style='margin:0;'>
             <span class='jm-ad-label'>Advertisement</span>
             <b:section class='jm-ad-gadget' id='sidebar_ad_section' maxwidgets='3' showaddelement='yes'/>
-            <div class='adsterra-banner-responsive' style='display:flex;justify-content:center;align-items:center;overflow:hidden;max-width:100%;margin:6px auto;min-height:90px;'>
-              <div style='transform:scale(0.42);transform-origin:left top;width:728px;height:90px;margin-bottom:-50px;'>
-                <script type='text/javascript'>
-                //<![CDATA[
-                  atOptions = {
-                    'key' : 'd872e9a91466c384b1b126f146a960cf',
-                    'format' : 'iframe',
-                    'height' : 90,
-                    'width' : 728,
-                    'params' : {}
-                  };
-                //]]>
-                </script>
-                <script src='https://www.highperformanceformat.com/d872e9a91466c384b1b126f146a960cf/invoke.js' type='text/javascript'></script>
-              </div>
-            </div>
+            <div class='adsterra-banner-responsive' id='jm-ad-sidebar-slot' style='display:flex;justify-content:center;align-items:flex-start;overflow:hidden;max-width:100%;margin:6px auto;height:48px;min-height:48px;'></div>
           </div>
 
           <div class='jm-side-card' id='salary-calc-box'>
@@ -980,20 +939,7 @@
       <div class='jm-ad-wrapper' id='jm-ad-native'>
         <span class='jm-ad-label'>Sponsored &#8226; Partner Recommendation</span>
         <b:section class='jm-ad-gadget' id='native_ad_section' maxwidgets='2' showaddelement='yes'/>
-        <div class='adsterra-banner-responsive' style='display:flex;justify-content:center;align-items:center;overflow-x:auto;max-width:100%;margin:6px auto;min-height:90px;'>
-          <script type='text/javascript'>
-          //<![CDATA[
-            atOptions = {
-              'key' : 'd872e9a91466c384b1b126f146a960cf',
-              'format' : 'iframe',
-              'height' : 90,
-              'width' : 728,
-              'params' : {}
-            };
-          //]]>
-          </script>
-          <script src='https://www.highperformanceformat.com/d872e9a91466c384b1b126f146a960cf/invoke.js' type='text/javascript'></script>
-        </div>
+        <div class='adsterra-banner-responsive' id='jm-ad-native-slot' style='display:flex;justify-content:center;align-items:center;overflow-x:auto;max-width:100%;margin:6px auto;min-height:90px;'></div>
       </div>
 
       <section class='jm-tools-section' id='scam-shield-tool'>
@@ -1052,20 +998,7 @@
     <div class='jm-ad-wrapper' style='max-width:880px;margin:24px auto;'>
       <span class='jm-ad-label'>Advertisement</span>
       <b:section class='jm-ad-gadget' id='post_footer_ad_section' maxwidgets='2' showaddelement='yes'/>
-      <div class='adsterra-banner-responsive' style='display:flex;justify-content:center;align-items:center;overflow-x:auto;max-width:100%;margin:6px auto;min-height:90px;'>
-        <script type='text/javascript'>
-        //<![CDATA[
-          atOptions = {
-            'key' : 'd872e9a91466c384b1b126f146a960cf',
-            'format' : 'iframe',
-            'height' : 90,
-            'width' : 728,
-            'params' : {}
-          };
-        //]]>
-        </script>
-        <script src='https://www.highperformanceformat.com/d872e9a91466c384b1b126f146a960cf/invoke.js' type='text/javascript'></script>
-      </div>
+      <div class='adsterra-banner-responsive' id='jm-ad-footer-slot' style='display:flex;justify-content:center;align-items:center;overflow-x:auto;max-width:100%;margin:6px auto;min-height:90px;'></div>
     </div>
   </div>
 
@@ -1094,20 +1027,7 @@
 
       <div class='jm-ad-wrapper' id='jm-modal-ad-slot' style='margin:0 0 14px;'>
         <span class='jm-ad-label'>Sponsored &#8226; Advertisement</span>
-        <div class='adsterra-banner-responsive' id='jm-modal-ad-content' style='display:flex;justify-content:center;align-items:center;overflow-x:auto;max-width:100%;margin:6px auto;min-height:90px;'>
-          <script type='text/javascript'>
-          //<![CDATA[
-            atOptions = {
-              'key' : 'd872e9a91466c384b1b126f146a960cf',
-              'format' : 'iframe',
-              'height' : 90,
-              'width' : 728,
-              'params' : {}
-            };
-          //]]>
-          </script>
-          <script src='https://www.highperformanceformat.com/d872e9a91466c384b1b126f146a960cf/invoke.js' type='text/javascript'></script>
-        </div>
+        <div class='adsterra-banner-responsive' id='jm-modal-ad-content' style='display:flex;justify-content:center;align-items:center;overflow-x:auto;max-width:100%;margin:6px auto;min-height:90px;'></div>
       </div>
 
       <div id='jm-modal-ats-match' class='jm-result-box' style='margin-bottom:12px;display:none;'></div>
@@ -1169,20 +1089,7 @@
       <!-- CENTER ADSTERRA 728x90 BANNER (100% Viewability Guaranteed!) -->
       <div class='jm-ad-wrapper' style='margin:14px auto;padding:10px;'>
         <span class='jm-ad-label'>Sponsored Partner &#8226; Verified Offer</span>
-        <div class='adsterra-banner-responsive' style='display:flex;justify-content:center;align-items:center;overflow-x:auto;max-width:100%;min-height:90px;'>
-          <script type='text/javascript'>
-          //<![CDATA[
-            atOptions = {
-              'key' : 'd872e9a91466c384b1b126f146a960cf',
-              'format' : 'iframe',
-              'height' : 90,
-              'width' : 728,
-              'params' : {}
-            };
-          //]]>
-          </script>
-          <script src='https://www.highperformanceformat.com/d872e9a91466c384b1b126f146a960cf/invoke.js' type='text/javascript'></script>
-        </div>
+        <div class='adsterra-banner-responsive' id='jm-verify-ad-slot' style='display:flex;justify-content:center;align-items:center;overflow-x:auto;max-width:100%;min-height:90px;'></div>
       </div>
 
       <!-- Action Button -->
@@ -1332,6 +1239,35 @@
       modalSponsorText: "Boost your interview chances with free remote career resources & verified guides.",
       modalSponsorUrl: "" // Optional HTTPS sponsor URL (clearly labeled Sponsored)
     };
+
+    var ADSTERRA_BANNER_SRCDOC = "<!DOCTYPE html><html><head><style>body{margin:0;padding:0;display:flex;justify-content:center;align-items:center;background:transparent;overflow:hidden;}</style></head><body><script type='text/javascript'>atOptions = {'key' : 'd872e9a91466c384b1b126f146a960cf', 'format' : 'iframe', 'height' : 90, 'width' : 728, 'params' : {}};</script><script type='text/javascript' src='https://www.highperformanceformat.com/d872e9a91466c384b1b126f146a960cf/invoke.js'></script></body></html>";
+
+    function renderAdsterraBanner(target, scale) {
+      if (!target) return;
+      var el = typeof target === "string" ? document.getElementById(target) : target;
+      if (!el) return;
+      var ifr = document.createElement("iframe");
+      ifr.style.cssText = "width:728px;height:90px;border:none;overflow:hidden;max-width:100%;display:block;margin:0 auto;";
+      if (scale) {
+        ifr.style.transform = "scale(" + scale + ")";
+        ifr.style.transformOrigin = "center top";
+      }
+      ifr.scrolling = "no";
+      ifr.srcdoc = ADSTERRA_BANNER_SRCDOC;
+      el.innerHTML = "";
+      el.appendChild(ifr);
+    }
+    window.renderAdsterraBanner = renderAdsterraBanner;
+
+    function initAllBanners() {
+      renderAdsterraBanner("jm-ad-top-slot");
+      renderAdsterraBanner("jm-ad-mid-slot");
+      renderAdsterraBanner("jm-ad-sidebar-slot", 0.44);
+      renderAdsterraBanner("jm-ad-native-slot");
+      renderAdsterraBanner("jm-ad-footer-slot");
+      renderAdsterraBanner("jm-modal-ad-content");
+      renderAdsterraBanner("jm-verify-ad-slot");
+    }
 
     var STARTER_PREVIEW_JOBS = [
       {
@@ -1972,33 +1908,19 @@
         if ((idx + 1) % CONFIG.inFeedAdEvery === 0 && idx + 1 < pageItems.length) {
           var adBox = document.createElement("div");
           adBox.className = "jm-ad-wrapper jm-infeed-ad";
-          adBox.innerHTML =
-            "<span class='jm-ad-label'>Sponsored &#8226; Advertisement</span>" +
-            "<div class='adsterra-banner-responsive' style='display:flex;justify-content:center;align-items:center;overflow-x:auto;max-width:100%;margin:6px auto;min-height:90px;'>" +
-              "<iframe src='about:blank' style='width:728px;height:90px;border:none;overflow:hidden;' scrolling='no'></iframe>" +
-            "</div>";
-          var ifr = adBox.querySelector("iframe");
-          if (ifr && ifr.contentWindow) {
-            try {
-              var doc = ifr.contentWindow.document;
-              doc.open();
-              doc.write(
-                "<!DOCTYPE html><html><head><style>body{margin:0;padding:0;display:flex;justify-content:center;align-items:center;background:transparent;overflow:hidden;}</style></head><body>" +
-                "<script type='text/javascript'>" +
-                "atOptions = {" +
-                  "'key' : 'd872e9a91466c384b1b126f146a960cf'," +
-                  "'format' : 'iframe'," +
-                  "'height' : 90," +
-                  "'width' : 728," +
-                  "'params' : {}" +
-                "};" +
-                "<\/script>" +
-                "<script type='text/javascript' src='https://www.highperformanceformat.com/d872e9a91466c384b1b126f146a960cf/invoke.js'><\/script>" +
-                "</body></html>"
-              );
-              doc.close();
-            } catch (err) {}
-          }
+
+          var adLabel = document.createElement("span");
+          adLabel.className = "jm-ad-label";
+          adLabel.textContent = "Sponsored • Advertisement";
+
+          var adWrap = document.createElement("div");
+          adWrap.className = "adsterra-banner-responsive";
+          adWrap.style.cssText = "display:flex;justify-content:center;align-items:center;overflow-x:auto;max-width:100%;margin:6px auto;min-height:90px;";
+
+          renderAdsterraBanner(adWrap);
+
+          adBox.appendChild(adLabel);
+          adBox.appendChild(adWrap);
           grid.appendChild(adBox);
         }
       });
@@ -2251,6 +2173,7 @@
     }
 
     document.addEventListener("DOMContentLoaded", function () {
+      initAllBanners();
       detectLiveAdGadgets();
       bindEvents();
       loadJobs();
