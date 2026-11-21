@@ -1393,7 +1393,8 @@
         <a expr:href='data:blog.homepageUrl + "p/about-us.html"'>About Us</a>
         <a expr:href='data:blog.homepageUrl + "p/contact-us.html"'>Contact Us</a>
         <a expr:href='data:blog.homepageUrl + "p/privacy-policy.html"'>Privacy Policy</a>
-        <a expr:href='data:blog.homepageUrl + "p/terms-and-disclaimer.html"'>Terms &amp; Disclaimer</a>
+        <a expr:href='data:blog.homepageUrl + "p/disclaimer.html"'>Disclaimer</a>
+        <a expr:href='data:blog.homepageUrl + "p/terms-of-use.html"'>Terms of Use</a>
         <a expr:href='data:blog.homepageUrl + "sitemap.xml"'>Sitemap</a>
       </nav>
       <p style='margin:0 0 6px;'>&#169; 2026 <data:blog.title/> &#8226; Verified Remote &amp; Digital Careers</p>
