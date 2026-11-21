@@ -8,50 +8,68 @@
   <!-- Monetag Multitag (Zone 312287) - Auto Monetization for In-Page Push, Popunder, Vignette & Interstitial -->
   <script async='async' data-cfasync='false' data-zone='312287' src='https://quge5.com/88/tag.min.js'></script>
 
-  <!-- GOOGLE SEARCH SEO & CRAWLER META -->
-  <meta content='Rozgar News Hub - 100% verified daily online jobs in Pakistan, work from home, remote careers, part-time student jobs, typing &amp; data entry with scam-shield protection and instant salary calculators.' name='description'/>
-  <meta content='online jobs in pakistan, remote jobs pakistan, part time jobs for students, data entry jobs work from home, typing jobs pakistan, daily rozgar jobs 2026, remote software developer jobs, customer support remote jobs, earn money online pakistan' name='keywords'/>
-  <meta content='index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' name='robots'/>
+  <!-- GOOGLE SEARCH SEO, SITEMAP & CRAWLER META -->
+  <link expr:href='data:blog.homepageUrl + "sitemap.xml"' rel='sitemap' title='Sitemap' type='application/xml'/>
+  <link expr:href='data:blog.homepageUrl + "feeds/posts/default?alt=rss"' rel='alternate' title='Rozgar News Hub - RSS Feed' type='application/rss+xml'/>
   <meta content='Rozgar News Hub' name='author'/>
   <meta content='PK' name='geo.region'/>
   <meta content='Pakistan' name='geo.placename'/>
   <meta content='general' name='rating'/>
-
-  <!-- OPENGRAPH & TWITTER RICH SOCIAL CARDS -->
   <meta content='Rozgar News Hub' property='og:site_name'/>
-  <meta content='website' property='og:type'/>
-  <meta content='Rozgar News Hub | Latest Verified Online &amp; Remote Jobs in Pakistan 2026' property='og:title'/>
-  <meta content='Browse 50+ fresh scam-verified online jobs, remote openings, student part-time roles, and salary estimators. Apply safely in 1-click.' property='og:description'/>
   <meta expr:content='data:blog.canonicalUrl' property='og:url'/>
   <meta content='https://hamzazayan078.github.io/rozgar-news-jobs/banner.png' property='og:image'/>
   <meta content='summary_large_image' name='twitter:card'/>
-  <meta content='Rozgar News Hub | Latest Verified Online &amp; Remote Jobs in Pakistan 2026' name='twitter:title'/>
-  <meta content='Browse 50+ fresh scam-verified online jobs, remote openings, student part-time roles, and salary estimators. Apply safely in 1-click.' name='twitter:description'/>
   <meta content='https://hamzazayan078.github.io/rozgar-news-jobs/banner.png' name='twitter:image'/>
 
-  <!-- GOOGLE STRUCTURED DATA: WEBSITE & SEARCHACTION JSON-LD SCHEMA -->
-  <script type='application/ld+json'>
-  //<![CDATA[
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "Rozgar News Hub",
-    "alternateName": ["RozgarNews", "Rozgar News Jobs Pakistan"],
-    "url": "https://rozgarnewshub.blogspot.com/",
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": "https://rozgarnewshub.blogspot.com/?q={search_term_string}",
-      "query-input": "required name=search_term_string"
+  <b:if cond='data:view.isHomepage'>
+    <meta content='Rozgar News Hub - 100% verified daily online jobs in Pakistan, work from home, remote careers, part-time student jobs, typing &amp; data entry with scam-shield protection and instant salary calculators.' name='description'/>
+    <meta content='online jobs in pakistan, remote jobs pakistan, part time jobs for students, data entry jobs work from home, typing jobs pakistan, daily rozgar jobs 2026, remote software developer jobs, customer support remote jobs, earn money online pakistan' name='keywords'/>
+    <meta content='index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' name='robots'/>
+    <meta content='website' property='og:type'/>
+    <meta content='Rozgar News Hub | Latest Verified Online &amp; Remote Jobs in Pakistan 2026' property='og:title'/>
+    <meta content='Browse 50+ fresh scam-verified online jobs, remote openings, student part-time roles, and salary estimators. Apply safely in 1-click.' property='og:description'/>
+    <meta content='Rozgar News Hub | Latest Verified Online &amp; Remote Jobs in Pakistan 2026' name='twitter:title'/>
+    <meta content='Browse 50+ fresh scam-verified online jobs, remote openings, student part-time roles, and salary estimators. Apply safely in 1-click.' name='twitter:description'/>
+
+    <!-- GOOGLE STRUCTURED DATA: WEBSITE & SEARCHACTION JSON-LD SCHEMA -->
+    <script type='application/ld+json'>
+    //<![CDATA[
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Rozgar News Hub",
+      "alternateName": ["RozgarNews", "Rozgar News Jobs Pakistan"],
+      "url": "https://rozgarnewshub.blogspot.com/",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://rozgarnewshub.blogspot.com/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
     }
-  }
-  //]]>
-  </script>
+    //]]>
+    </script>
+  <b:elseif cond='data:view.isSingleItem'/>
+    <meta content='index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' name='robots'/>
+    <meta content='article' property='og:type'/>
+    <meta expr:content='data:view.title + " - Apply Online 2026 | Rozgar News Hub"' property='og:title'/>
+    <meta expr:content='"Apply safely for " + data:view.title + " on Rozgar News Hub. Includes Scam-Shield check, salary estimator, and direct employer link."' property='og:description'/>
+    <meta expr:content='data:view.title + " - Apply Online 2026 | Rozgar News Hub"' name='twitter:title'/>
+    <meta expr:content='"Apply safely for " + data:view.title + " on Rozgar News Hub. Includes Scam-Shield check &amp; direct apply link."' name='twitter:description'/>
+  <b:elseif cond='data:view.isSearch'/>
+    <meta content='noindex, follow' name='robots'/>
+    <meta content='website' property='og:type'/>
+    <meta expr:content='data:view.title + " | Rozgar News Hub"' property='og:title'/>
+  <b:else/>
+    <meta content='index, follow, max-snippet:-1, max-image-preview:large' name='robots'/>
+    <meta content='website' property='og:type'/>
+    <meta expr:content='data:view.title + " Jobs &amp; Careers | Rozgar News Hub"' property='og:title'/>
+  </b:if>
 
   <title>
     <b:if cond='data:view.isHomepage'>
       <data:blog.title/> - Latest Online Jobs in Pakistan 2026 | Verified Remote Careers
     <b:elseif cond='data:view.isSingleItem'/>
-      <data:view.title/> | <data:blog.title/>
+      <data:view.title/> - Apply Online 2026 | <data:blog.title/>
     <b:else/>
       <data:view.title/> - <data:blog.title/>
     </b:if>
@@ -422,6 +440,26 @@
     .jm-trust-medium { background: var(--warn-bg); color: var(--warn-text); }
     .jm-trust-low { background: var(--danger-bg); color: var(--danger-text); }
 
+    .jm-card-featured {
+      border: 1.5px solid var(--brand);
+      background: linear-gradient(180deg, #f0fdf4 0%, #ffffff 34%);
+    }
+
+    .jm-featured-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+      background: #fef3c7;
+      color: #92400e;
+      border: 1px solid #fcd34d;
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 2px 7px;
+      border-radius: 999px;
+      white-space: nowrap;
+      margin-left: 6px;
+    }
+
     .jm-card h3 {
       margin: 0 0 8px;
       font-size: 1.04rem;
@@ -605,6 +643,53 @@
       margin: 24px auto;
       max-width: 880px;
       box-shadow: var(--shadow);
+    }
+
+    .jm-breadcrumb {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+    }
+
+    .jm-breadcrumb a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .jm-post-labels {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin: 10px 0 18px;
+    }
+
+    .jm-post-label-pill {
+      background: #eff6ff;
+      color: #1d4ed8;
+      border: 1px solid #bfdbfe;
+      border-radius: 999px;
+      padding: 3px 10px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .jm-single-cta-box {
+      margin-top: 22px;
+      padding: 16px 18px;
+      background: var(--brand-soft);
+      border: 1px solid #a7f3d0;
+      border-radius: 12px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
     }
 
     .jm-footer {
@@ -975,17 +1060,53 @@
           <b:if cond='not data:view.isHomepage'>
             <b:loop values='data:posts' var='post'>
               <article class='jm-single-post'>
-                <div style='margin-bottom:12px;'>
+                <nav aria-label='Breadcrumb' class='jm-breadcrumb'>
+                  <a expr:href='data:blog.homepageUrl'>Home</a>
+                  <span>&#8250;</span>
+                  <a expr:href='data:blog.homepageUrl + "#jobs-board"'>Verified Jobs</a>
+                  <span>&#8250;</span>
+                  <span><data:post.title/></span>
+                </nav>
+
+                <div style='display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:space-between;margin-bottom:12px;'>
                   <a class='jm-btn jm-btn-outline' expr:href='data:blog.homepageUrl' style='padding:7px 14px;font-size:0.84rem;'>
                     &#8592; Back to Live Job Board
                   </a>
+                  <button class='jm-btn' onclick="window.open('https://api.whatsapp.com/send?text=' + encodeURIComponent('Check out this verified job opening: ' + document.title + ' ' + window.location.href), '_blank');" style='background:#25D366;color:#fff;padding:7px 14px;font-size:0.84rem;' type='button'>
+                    &#128222; Share on WhatsApp
+                  </button>
                 </div>
-                <h1 style='margin:0 0 12px;font-size:1.75rem;line-height:1.25;'><data:post.title/></h1>
-                <div style='font-size:0.84rem;color:#64748b;margin-bottom:18px;'>
-                  Published: <data:post.dateHeader/>
+
+                <h1 class='jm-single-title' style='margin:0 0 10px;font-size:1.75rem;line-height:1.25;'><data:post.title/></h1>
+                <div style='font-size:0.84rem;color:#64748b;margin-bottom:10px;'>
+                  Published: <data:post.dateHeader/> &#8226; Scam-Shield Verified &#8226; Zero Fee Listing
                 </div>
+
+                <b:if cond='data:post.labels'>
+                  <div class='jm-post-labels'>
+                    <b:loop values='data:post.labels' var='label'>
+                      <a class='jm-post-label-pill' expr:href='data:label.url' rel='tag'>#<data:label.name/></a>
+                    </b:loop>
+                  </div>
+                </b:if>
+
+                <div class='jm-ad-wrapper' style='margin:14px auto;'>
+                  <span class='jm-ad-label'>Sponsored &#8226; Advertisement</span>
+                  <div class='adsterra-banner-responsive jm-single-ad-slot' style='display:flex;justify-content:center;align-items:center;overflow-x:auto;max-width:100%;margin:6px auto;min-height:90px;'></div>
+                </div>
+
                 <div class='post-body'>
                   <data:post.body/>
+                </div>
+
+                <div class='jm-single-cta-box'>
+                  <div>
+                    <strong style='display:block;color:#065f46;font-size:0.96rem;'>Looking for More Verified Daily Jobs?</strong>
+                    <span style='font-size:0.84rem;color:#334155;'>Browse 50+ Scam-Shield verified remote, typing &amp; student openings updated daily.</span>
+                  </div>
+                  <a class='jm-btn jm-btn-primary' expr:href='data:blog.homepageUrl'>
+                    View All Live Jobs &#8594;
+                  </a>
                 </div>
               </article>
             </b:loop>
@@ -1101,75 +1222,77 @@
     </div>
   </div>
 
-  <!-- GOOGLE SEO FAQ & KNOWLEDGE HUB -->
-  <section class='jm-container'>
-    <div class='jm-faq-section'>
-      <h2 class='jm-faq-title'>Frequently Asked Questions &#8212; Online &amp; Remote Jobs Pakistan</h2>
-      <p class='jm-faq-desc'>Everything you need to know about applying for verified remote careers and work-from-home jobs in Pakistan.</p>
-      <div class='jm-faq-grid'>
-        <div class='jm-faq-card'>
-          <h3>🛡️ How do I apply without getting scammed?</h3>
-          <p>Rozgar News Hub verifies employer domains before listing. Use our built-in Scam Checker before applying: never pay registration fees, security deposits, or Easypaisa/Jazzcash charges to apply for any job.</p>
-        </div>
-        <div class='jm-faq-card'>
-          <h3>💵 Are remote jobs paid in USD or PKR?</h3>
-          <p>Most international employers pay in USD, EUR, or GBP via Payoneer, Wise, or direct bank transfer. Use our real-time Salary PKR Calculator to calculate exact converted Pakistani Rupee earnings.</p>
-        </div>
-        <div class='jm-faq-card'>
-          <h3>🎓 Can college &amp; university students apply?</h3>
-          <p>Yes! We feature fresh daily openings for part-time student roles, typing, data entry, virtual assistance, content creation, and junior web development that fit flexible student schedules.</p>
-        </div>
-        <div class='jm-faq-card'>
-          <h3>🚀 What are the highest paying remote skills in 2026?</h3>
-          <p>Top remote earners in Pakistan specialize in Full-Stack Web Development, Python Automation, SEO Content Strategy, Digital Customer Success, UI/UX Design, and Social Media Management.</p>
+  <b:if cond='data:view.isHomepage'>
+    <!-- GOOGLE SEO FAQ & KNOWLEDGE HUB (HOMEPAGE) -->
+    <section class='jm-container'>
+      <div class='jm-faq-section'>
+        <h2 class='jm-faq-title'>Frequently Asked Questions &#8212; Online &amp; Remote Jobs Pakistan</h2>
+        <p class='jm-faq-desc'>Everything you need to know about applying for verified remote careers and work-from-home jobs in Pakistan.</p>
+        <div class='jm-faq-grid'>
+          <div class='jm-faq-card'>
+            <h3>🛡️ How do I apply without getting scammed?</h3>
+            <p>Rozgar News Hub verifies employer domains before listing. Use our built-in Scam Checker before applying: never pay registration fees, security deposits, or Easypaisa/Jazzcash charges to apply for any job.</p>
+          </div>
+          <div class='jm-faq-card'>
+            <h3>💵 Are remote jobs paid in USD or PKR?</h3>
+            <p>Most international employers pay in USD, EUR, or GBP via Payoneer, Wise, or direct bank transfer. Use our real-time Salary PKR Calculator to calculate exact converted Pakistani Rupee earnings.</p>
+          </div>
+          <div class='jm-faq-card'>
+            <h3>🎓 Can college &amp; university students apply?</h3>
+            <p>Yes! We feature fresh daily openings for part-time student roles, typing, data entry, virtual assistance, content creation, and junior web development that fit flexible student schedules.</p>
+          </div>
+          <div class='jm-faq-card'>
+            <h3>🚀 What are the highest paying remote skills in 2026?</h3>
+            <p>Top remote earners in Pakistan specialize in Full-Stack Web Development, Python Automation, SEO Content Strategy, Digital Customer Success, UI/UX Design, and Social Media Management.</p>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- GOOGLE FAQ SCHEMA FOR RICH SEARCH SNIPPETS -->
-  <script type='application/ld+json'>
-  //<![CDATA[
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "How do I apply for verified online jobs in Pakistan without getting scammed?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Rozgar News Hub verifies employer domains before listing. Use our built-in Scam Checker before applying: never pay registration fees, security deposits, or Easypaisa/Jazzcash charges to apply for any job."
+    <!-- GOOGLE FAQ SCHEMA FOR RICH SEARCH SNIPPETS -->
+    <script type='application/ld+json'>
+    //<![CDATA[
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do I apply for verified online jobs in Pakistan without getting scammed?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Rozgar News Hub verifies employer domains before listing. Use our built-in Scam Checker before applying: never pay registration fees, security deposits, or Easypaisa/Jazzcash charges to apply for any job."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are remote jobs listed on Rozgar News Hub paid in USD or PKR?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most international employers pay in USD, EUR, or GBP via Payoneer, Wise, or direct bank transfer. Use our real-time Salary PKR Calculator to calculate exact converted Pakistani Rupee earnings."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can college and university students apply for part-time online jobs?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes! We feature fresh daily openings for part-time student roles, typing, data entry, virtual assistance, content creation, and junior web development that fit flexible student schedules."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the highest paying remote skills in Pakistan for 2026?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Top remote earners in Pakistan specialize in Full-Stack Web Development, Python Automation, SEO Content Strategy, Digital Customer Success, UI/UX Design, and Social Media Management."
+          }
         }
-      },
-      {
-        "@type": "Question",
-        "name": "Are remote jobs listed on Rozgar News Hub paid in USD or PKR?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Most international employers pay in USD, EUR, or GBP via Payoneer, Wise, or direct bank transfer. Use our real-time Salary PKR Calculator to calculate exact converted Pakistani Rupee earnings."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can college and university students apply for part-time online jobs?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes! We feature fresh daily openings for part-time student roles, typing, data entry, virtual assistance, content creation, and junior web development that fit flexible student schedules."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What are the highest paying remote skills in Pakistan for 2026?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Top remote earners in Pakistan specialize in Full-Stack Web Development, Python Automation, SEO Content Strategy, Digital Customer Success, UI/UX Design, and Social Media Management."
-        }
-      }
-    ]
-  }
-  //]]>
-  </script>
+      ]
+    }
+    //]]>
+    </script>
+  </b:if>
 
   <footer class='jm-footer'>
     <div class='jm-container'>
@@ -1179,7 +1302,7 @@
   </footer>
 
   <!-- Floating Live Hiring Alert Pill (Sticky Social Bar Trigger) -->
-  <div class='jm-floating-alert' id='jm-live-pill' onclick="document.getElementById('jobs-board').scrollIntoView({behavior:'smooth'});">
+  <div class='jm-floating-alert' id='jm-live-pill' onclick="var b=document.getElementById('jobs-board');if(b){b.scrollIntoView({behavior:'smooth'});}else{window.location.href='/';}">
     <span class='jm-pulse-dot'></span>
     <span><strong>48+ Verified Jobs</strong> Live Today</span>
     <span style='background:#2563eb;color:#fff;border-radius:12px;padding:2px 8px;font-size:0.75rem;margin-left:4px;'>Browse &#8594;</span>
@@ -1267,6 +1390,52 @@
       renderAdsterraBanner("jm-ad-footer-slot");
       renderAdsterraBanner("jm-modal-ad-content");
       renderAdsterraBanner("jm-verify-ad-slot");
+      document.querySelectorAll(".jm-single-ad-slot").forEach(function (slot) {
+        renderAdsterraBanner(slot);
+      });
+    }
+
+    function injectSinglePostSchema() {
+      try {
+        if (document.getElementById("jm-jobs-grid")) return;
+        var postEl = document.querySelector(".jm-single-post");
+        if (!postEl) return;
+        var titleEl = postEl.querySelector(".jm-single-title");
+        var bodyEl = postEl.querySelector(".post-body");
+        var labelEl = postEl.querySelector(".jm-post-label-pill");
+        var title = titleEl ? titleEl.textContent.trim() : document.title;
+        var desc = bodyEl ? bodyEl.textContent.replace(/\s+/g, " ").trim().slice(0, 160) : title;
+        var crumbs = [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": CONFIG.siteUrl + "/" }
+        ];
+        if (labelEl && labelEl.getAttribute("href")) {
+          crumbs.push({ "@type": "ListItem", "position": 2, "name": labelEl.textContent.replace(/^#/, ""), "item": labelEl.href });
+          crumbs.push({ "@type": "ListItem", "position": 3, "name": title, "item": window.location.href });
+        } else {
+          crumbs.push({ "@type": "ListItem", "position": 2, "name": title, "item": window.location.href });
+        }
+        var schema = [
+          {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": crumbs
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            "headline": title,
+            "description": desc,
+            "mainEntityOfPage": { "@type": "WebPage", "@id": window.location.href },
+            "author": { "@type": "Organization", "name": CONFIG.siteName },
+            "publisher": { "@type": "Organization", "name": CONFIG.siteName, "url": CONFIG.siteUrl }
+          }
+        ];
+        var s = document.createElement("script");
+        s.id = "jm-single-post-schema";
+        s.type = "application/ld+json";
+        s.textContent = JSON.stringify(schema);
+        document.head.appendChild(s);
+      } catch (err) {}
     }
 
     var STARTER_PREVIEW_JOBS = [
@@ -1676,9 +1845,14 @@
         if (isNaN(trustNum)) trustNum = 88;
         var applyHref = isSafeUrl(ds.applyurl) ? ds.applyurl : postUrl;
         var company = ds.company || "Featured Listing";
+        var publishedRaw = (entry.published && entry.published.$t) || "";
+        var publishedDate = publishedRaw ? publishedRaw.slice(0, 10) : "";
+        var summaryText = plain || ("View full details and application steps for " + title + " on Rozgar News Hub.");
         return {
           id: "blogger-" + idx,
+          isFeatured: true,
           source: "Rozgar News Post",
+          date_posted: publishedDate,
           title: title,
           company: company,
           url: applyHref,
@@ -1687,12 +1861,12 @@
           location: ds.location || (cats.indexOf("Remote") !== -1 ? "Remote" : "View Details"),
           remote: ds.remote ? ds.remote === "true" : (title + " " + cats.join(" ")).toLowerCase().indexOf("remote") !== -1,
           salary: ds.salary || "",
-          summary: plain.length > 170 ? plain.slice(0, 170) + "..." : plain,
+          summary: summaryText.length > 170 ? summaryText.slice(0, 170) + "..." : summaryText,
           description_html: descEl ? descEl.innerHTML : content,
           ats_keywords: kws,
           trust: {
             score: trustNum,
-            label: ds.trustlabel || "Verified Post",
+            label: ds.trustlabel || "Featured Post",
             level: trustNum >= 85 ? "high" : trustNum >= 60 ? "medium" : "low"
           },
           cover_pitch: "Subject: Application for " + title + "\n\nHi " + company + " Hiring Team,\n\nI found your opening on Rozgar News and would love to apply with my relevant skills in " + (kws.slice(0, 3).join(", ") || "this role") + ".\n\nBest regards,\n[Your Name]"
@@ -1704,8 +1878,23 @@
       var statusEl = document.getElementById("jm-feed-status");
       if (!statusEl) return;
 
-      var merged = [];
+      var extJobs = [];
+      var bloggerJobs = [];
       var sourcesUsed = [];
+
+      // Fetch manual Blogger posts first so owner-published jobs stay pinned at the top of Page 1
+      try {
+        if (window.location.protocol !== "file:") {
+          var blogRes = await fetch(CONFIG.bloggerFeedUrl);
+          if (blogRes.ok) {
+            var blogJson = await blogRes.json();
+            bloggerJobs = parseBloggerEntries(blogJson);
+            if (bloggerJobs.length > 0) {
+              sourcesUsed.push("Featured Posts (" + bloggerJobs.length + ")");
+            }
+          }
+        }
+      } catch (err) { /* Graceful fallback below */ }
 
       if (CONFIG.externalFeedUrl && isSafeUrl(CONFIG.externalFeedUrl)) {
         try {
@@ -1713,7 +1902,7 @@
           if (extRes.ok) {
             var extJson = await extRes.json();
             if (Array.isArray(extJson.jobs) && extJson.jobs.length > 0) {
-              merged = merged.concat(extJson.jobs);
+              extJobs = extJson.jobs;
               sourcesUsed.push("Live Auto-Feed (" + extJson.jobs.length + ")");
             }
           }
@@ -1723,7 +1912,7 @@
             if (rawRes.ok) {
               var rawJson = await rawRes.json();
               if (Array.isArray(rawJson.jobs) && rawJson.jobs.length > 0) {
-                merged = merged.concat(rawJson.jobs);
+                extJobs = rawJson.jobs;
                 sourcesUsed.push("Raw Cloud Feed (" + rawJson.jobs.length + ")");
               }
             }
@@ -1731,19 +1920,7 @@
         }
       }
 
-      try {
-        if (window.location.protocol !== "file:") {
-          var blogRes = await fetch(CONFIG.bloggerFeedUrl);
-          if (blogRes.ok) {
-            var blogJson = await blogRes.json();
-            var bloggerJobs = parseBloggerEntries(blogJson);
-            if (bloggerJobs.length > 0) {
-              merged = merged.concat(bloggerJobs);
-              sourcesUsed.push("Blogger Posts (" + bloggerJobs.length + ")");
-            }
-          }
-        }
-      } catch (err) { /* Graceful fallback below */ }
+      var merged = bloggerJobs.concat(extJobs);
 
       if (merged.length === 0) {
         merged = STARTER_PREVIEW_JOBS.slice();
@@ -1751,6 +1928,12 @@
       } else {
         statusEl.textContent = "Synced live from: " + sourcesUsed.join(" + ");
       }
+
+      try {
+        var urlQ = new URLSearchParams(window.location.search).get("q");
+        var searchIn = document.getElementById("jm-search-input");
+        if (urlQ && searchIn && !searchIn.value) searchIn.value = urlQ;
+      } catch (e3) {}
 
       allJobs = merged;
       updateStats(allJobs);
@@ -1872,7 +2055,7 @@
 
       pageItems.forEach(function (job, idx) {
         var card = document.createElement("article");
-        card.className = "jm-card";
+        card.className = job.isFeatured ? "jm-card jm-card-featured" : "jm-card";
         var isSaved = savedIds.indexOf(job.id) !== -1;
 
         var trust = job.trust || { score: 85, label: "Verified Safe", level: "high" };
@@ -1881,7 +2064,10 @@
         card.innerHTML =
           "<div>" +
             "<div class='jm-card-top'>" +
-              "<span class='jm-company'>" + escapeHtml(job.company) + "</span>" +
+              "<div>" +
+                "<span class='jm-company'>" + escapeHtml(job.company) + "</span>" +
+                (job.isFeatured ? "<span class='jm-featured-pill'>&#128204; Featured</span>" : "") +
+              "</div>" +
               "<span class='" + trustClass + "'>" + escapeHtml(trust.score + "/100 " + trust.label) + "</span>" +
             "</div>" +
             "<h3>" + escapeHtml(job.title) + "</h3>" +
@@ -2177,6 +2363,7 @@
       detectLiveAdGadgets();
       bindEvents();
       loadJobs();
+      injectSinglePostSchema();
     });
   })();
   //]]>
