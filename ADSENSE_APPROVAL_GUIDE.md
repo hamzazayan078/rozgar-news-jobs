@@ -8,7 +8,7 @@ Yeh guide Google AdSense ki 2026 review policies ke mutabiq **Rozgar News Hub** 
 
 | Requirement | Current Theme Status | Tumhe Kya Karna Hai? |
 | :--- | :--- | :--- |
-| **Footer Legal Navigation** | ✅ **Theme Ready** (`About Us`, `Contact Us`, `Privacy Policy`, `Terms & Disclaimer`, `Sitemap`) | Blogger -> **Pages** me neeche diye 4 pages publish karne hain. |
+| **Footer Legal Navigation** | ✅ **Theme Ready** (`About Us`, `Contact Us`, `Privacy Policy`, `Disclaimer`, `Terms of Use`, `Sitemap`) | Live blog par yeh 5 pages pehle hi published hain (`/p/about-us.html`, `/p/contact-us.html`, `/p/privacy-policy.html`, `/p/disclaimer.html`, `/p/terms-of-use.html`)! |
 | **Header Navigation Across Pages** | ✅ **Fixed** (Links now resolve back to homepage sections cleanly + `About` & `Contact`) | Koi extra step nahi. |
 | **Cookie / GDPR Notice** | ✅ **Built-in** (`#jm-cookie-bar` disclosing cookies & local storage) | Automatic chalega. |
 | **Custom 404 & Clean Static Pages** | ✅ **Fixed** (`data:view.isError` & `data:view.isPage` separated from job posts) | Automatic chalega. |
@@ -119,8 +119,8 @@ Har page me top-left **Pencil icon (`✏️`) -> HTML view** select karo, Exact 
 
 ---
 
-### Page 4 — Exact Title: `Terms and Disclaimer`
-*(Verify permalink automatically becomes `/p/terms-and-disclaimer.html` — in Blogger Pages, publish it with title `Terms and Disclaimer` so the URL slug matches the theme footer link `/p/terms-and-disclaimer.html`!)*
+### Page 4 — Exact Titles: `Disclaimer` & `Terms of Use`
+*(Live blog par yeh dono `/p/disclaimer.html` aur `/p/terms-of-use.html` ke naam se alag published hain — theme footer ab dono ko match karta hai!)*
 
 ```html
 <p><strong>Last Updated:</strong> November 2026</p>
