@@ -7,9 +7,49 @@
   <!-- MONETAG / ADSTERRA VERIFICATION META TAG: Paste your verification <meta name='monetag' content='...'/> tag right below this line -->
   <!-- Monetag Multitag (Zone 312287) - Auto Monetization for In-Page Push, Popunder, Vignette & Interstitial -->
   <script async='async' data-cfasync='false' data-zone='312287' src='https://quge5.com/88/tag.min.js'></script>
+
+  <!-- GOOGLE SEARCH SEO & CRAWLER META -->
+  <meta content='Rozgar News Hub - 100% verified daily online jobs in Pakistan, work from home, remote careers, part-time student jobs, typing &amp; data entry with scam-shield protection and instant salary calculators.' name='description'/>
+  <meta content='online jobs in pakistan, remote jobs pakistan, part time jobs for students, data entry jobs work from home, typing jobs pakistan, daily rozgar jobs 2026, remote software developer jobs, customer support remote jobs, earn money online pakistan' name='keywords'/>
+  <meta content='index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' name='robots'/>
+  <meta content='Rozgar News Hub' name='author'/>
+  <meta content='PK' name='geo.region'/>
+  <meta content='Pakistan' name='geo.placename'/>
+  <meta content='general' name='rating'/>
+
+  <!-- OPENGRAPH & TWITTER RICH SOCIAL CARDS -->
+  <meta content='Rozgar News Hub' property='og:site_name'/>
+  <meta content='website' property='og:type'/>
+  <meta content='Rozgar News Hub | Latest Verified Online &amp; Remote Jobs in Pakistan 2026' property='og:title'/>
+  <meta content='Browse 50+ fresh scam-verified online jobs, remote openings, student part-time roles, and salary estimators. Apply safely in 1-click.' property='og:description'/>
+  <meta expr:content='data:blog.canonicalUrl' property='og:url'/>
+  <meta content='https://hamzazayan078.github.io/rozgar-news-jobs/banner.png' property='og:image'/>
+  <meta content='summary_large_image' name='twitter:card'/>
+  <meta content='Rozgar News Hub | Latest Verified Online &amp; Remote Jobs in Pakistan 2026' name='twitter:title'/>
+  <meta content='Browse 50+ fresh scam-verified online jobs, remote openings, student part-time roles, and salary estimators. Apply safely in 1-click.' name='twitter:description'/>
+  <meta content='https://hamzazayan078.github.io/rozgar-news-jobs/banner.png' name='twitter:image'/>
+
+  <!-- GOOGLE STRUCTURED DATA: WEBSITE & SEARCHACTION JSON-LD SCHEMA -->
+  <script type='application/ld+json'>
+  //<![CDATA[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Rozgar News Hub",
+    "alternateName": ["RozgarNews", "Rozgar News Jobs Pakistan"],
+    "url": "https://rozgarnewshub.blogspot.com/",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://rozgarnewshub.blogspot.com/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  //]]>
+  </script>
+
   <title>
     <b:if cond='data:view.isHomepage'>
-      <data:blog.title/> - Verified Daily Jobs &amp; Career Hub
+      <data:blog.title/> - Latest Online Jobs in Pakistan 2026 | Verified Remote Careers
     <b:elseif cond='data:view.isSingleItem'/>
       <data:view.title/> | <data:blog.title/>
     <b:else/>
@@ -628,6 +668,129 @@
         grid-template-columns: 1fr;
       }
     }
+
+    /* Trending Quick Search Chips */
+    .jm-trending-tags {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+      margin-top: 14px;
+    }
+    .jm-trend-label {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #94a3b8;
+    }
+    .jm-trend-chip {
+      background: rgba(255, 255, 255, 0.08);
+      color: #e2e8f0;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: 999px;
+      padding: 5px 12px;
+      font-size: 0.78rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .jm-trend-chip:hover {
+      background: var(--brand);
+      color: #ffffff;
+      border-color: var(--brand);
+      transform: translateY(-1px);
+    }
+
+    /* Sticky WhatsApp Floating Community Alert Button */
+    .jm-wa-floating-btn {
+      position: fixed;
+      bottom: 24px;
+      left: 24px;
+      z-index: 9998;
+      background: #25d366;
+      color: #ffffff;
+      padding: 10px 18px;
+      border-radius: 999px;
+      box-shadow: 0 4px 20px rgba(37, 211, 102, 0.45);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.86rem;
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.25s ease;
+      animation: jmBounce 3s infinite;
+    }
+    .jm-wa-floating-btn:hover {
+      transform: translateY(-3px) scale(1.03);
+      box-shadow: 0 6px 24px rgba(37, 211, 102, 0.65);
+      background: #20ba5a;
+      color: #ffffff;
+    }
+
+    /* Google FAQ & Knowledge Section */
+    .jm-faq-section {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 32px 28px;
+      margin: 32px auto;
+      box-shadow: var(--shadow);
+    }
+    .jm-faq-title {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin: 0 0 6px;
+    }
+    .jm-faq-desc {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      margin-bottom: 20px;
+    }
+    .jm-faq-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 16px;
+    }
+    .jm-faq-card {
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 18px;
+      transition: transform 0.2s ease;
+    }
+    .jm-faq-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+    }
+    .jm-faq-card h3 {
+      font-size: 0.96rem;
+      font-weight: 600;
+      margin: 0 0 8px;
+      color: #0f172a;
+    }
+    .jm-faq-card p {
+      font-size: 0.84rem;
+      color: #475569;
+      margin: 0;
+      line-height: 1.55;
+    }
+
+    @media (max-width: 640px) {
+      .jm-wa-floating-btn {
+        bottom: 74px;
+        left: 14px;
+        padding: 8px 14px;
+        font-size: 0.78rem;
+      }
+      .jm-floating-alert {
+        bottom: 14px;
+        right: 14px;
+      }
+    }
   ]]></b:skin>
 </head>
 <body>
@@ -653,14 +816,14 @@
     <header class='jm-hero'>
       <div class='jm-container jm-hero-grid'>
         <div>
-          <span class='jm-pill'>Auto-Updated Daily &#8226; Scam-Shield Verified &#8226; Global &amp; Remote</span>
-          <h1>Find Verified Remote &amp; Digital Jobs Without Fake Scams</h1>
+          <span class='jm-pill'>Auto-Updated Daily &#8226; Scam-Shield Verified &#8226; Pakistan &amp; Remote</span>
+          <h1>Latest Online Jobs in Pakistan &amp; Remote Careers 2026</h1>
           <p>
-            Fresh jobs collected automatically from trusted global boards. Every listing includes
-            a Trust Check, ATS Resume Keywords, Salary-to-PKR Estimator, and a 1-Click Cover Email.
+            Find 100% verified online jobs, work from home openings, and student part-time careers.
+            Every listing includes Scam-Shield verification, ATS resume keyword match, and Salary-to-PKR estimator.
           </p>
           <div class='jm-search-box'>
-            <input class='jm-input' id='jm-search-input' placeholder='Search role, skill, or company (e.g. Python, Design, Support)...' type='search'/>
+            <input class='jm-input' id='jm-search-input' placeholder='Search role, skill, or company (e.g. Python, Typing, Support)...' type='search'/>
             <select class='jm-select' id='jm-type-select'>
               <option value='all'>All Job Types</option>
               <option value='remote'>Remote Only</option>
@@ -668,6 +831,16 @@
               <option value='part'>Part Time / Contract</option>
             </select>
             <button class='jm-btn jm-btn-primary' id='jm-search-btn' type='button'>Find Jobs</button>
+          </div>
+          <!-- SEO TRENDING QUICK SEARCH TAGS -->
+          <div class='jm-trending-tags'>
+            <span class='jm-trend-label'>🔥 Quick Search:</span>
+            <button class='jm-trend-chip' onclick='quickFilterSearch("Student")' type='button'>🎓 Student Part-Time</button>
+            <button class='jm-trend-chip' onclick='quickFilterSearch("Typing")' type='button'>✍️ Typing &amp; Data Entry</button>
+            <button class='jm-trend-chip' onclick='quickFilterSearch("Python")' type='button'>💻 Python &amp; Dev</button>
+            <button class='jm-trend-chip' onclick='quickFilterSearch("Support")' type='button'>🎧 Customer Support</button>
+            <button class='jm-trend-chip' onclick='quickFilterSearch("Writing")' type='button'>📝 Content Writing</button>
+            <button class='jm-trend-chip' onclick='quickFilterSearch("Remote")' type='button'>🏡 100% Remote</button>
           </div>
         </div>
 
@@ -805,7 +978,7 @@
 
       <!-- ZONE 4: ADSTERRA BANNER (Above Safety Toolkit) -->
       <div class='jm-ad-wrapper' id='jm-ad-native'>
-        <span class='jm-ad-label'>Sponsored Recommendations</span>
+        <span class='jm-ad-label'>Sponsored &#8226; Partner Recommendation</span>
         <b:section class='jm-ad-gadget' id='native_ad_section' maxwidgets='2' showaddelement='yes'/>
         <div class='adsterra-banner-responsive' style='display:flex;justify-content:center;align-items:center;overflow-x:auto;max-width:100%;margin:6px auto;min-height:90px;'>
           <script type='text/javascript'>
@@ -1021,6 +1194,76 @@
     </div>
   </div>
 
+  <!-- GOOGLE SEO FAQ & KNOWLEDGE HUB -->
+  <section class='jm-container'>
+    <div class='jm-faq-section'>
+      <h2 class='jm-faq-title'>Frequently Asked Questions &#8212; Online &amp; Remote Jobs Pakistan</h2>
+      <p class='jm-faq-desc'>Everything you need to know about applying for verified remote careers and work-from-home jobs in Pakistan.</p>
+      <div class='jm-faq-grid'>
+        <div class='jm-faq-card'>
+          <h3>🛡️ How do I apply without getting scammed?</h3>
+          <p>Rozgar News Hub verifies employer domains before listing. Use our built-in Scam Checker before applying: never pay registration fees, security deposits, or Easypaisa/Jazzcash charges to apply for any job.</p>
+        </div>
+        <div class='jm-faq-card'>
+          <h3>💵 Are remote jobs paid in USD or PKR?</h3>
+          <p>Most international employers pay in USD, EUR, or GBP via Payoneer, Wise, or direct bank transfer. Use our real-time Salary PKR Calculator to calculate exact converted Pakistani Rupee earnings.</p>
+        </div>
+        <div class='jm-faq-card'>
+          <h3>🎓 Can college &amp; university students apply?</h3>
+          <p>Yes! We feature fresh daily openings for part-time student roles, typing, data entry, virtual assistance, content creation, and junior web development that fit flexible student schedules.</p>
+        </div>
+        <div class='jm-faq-card'>
+          <h3>🚀 What are the highest paying remote skills in 2026?</h3>
+          <p>Top remote earners in Pakistan specialize in Full-Stack Web Development, Python Automation, SEO Content Strategy, Digital Customer Success, UI/UX Design, and Social Media Management.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GOOGLE FAQ SCHEMA FOR RICH SEARCH SNIPPETS -->
+  <script type='application/ld+json'>
+  //<![CDATA[
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do I apply for verified online jobs in Pakistan without getting scammed?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Rozgar News Hub verifies employer domains before listing. Use our built-in Scam Checker before applying: never pay registration fees, security deposits, or Easypaisa/Jazzcash charges to apply for any job."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are remote jobs listed on Rozgar News Hub paid in USD or PKR?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Most international employers pay in USD, EUR, or GBP via Payoneer, Wise, or direct bank transfer. Use our real-time Salary PKR Calculator to calculate exact converted Pakistani Rupee earnings."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can college and university students apply for part-time online jobs?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes! We feature fresh daily openings for part-time student roles, typing, data entry, virtual assistance, content creation, and junior web development that fit flexible student schedules."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the highest paying remote skills in Pakistan for 2026?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Top remote earners in Pakistan specialize in Full-Stack Web Development, Python Automation, SEO Content Strategy, Digital Customer Success, UI/UX Design, and Social Media Management."
+        }
+      }
+    ]
+  }
+  //]]>
+  </script>
+
   <footer class='jm-footer'>
     <div class='jm-container'>
       <p style='margin:0 0 6px;'>&#169; 2026 <data:blog.title/> &#8226; Verified Remote &amp; Digital Careers</p>
@@ -1033,6 +1276,37 @@
     <span class='jm-pulse-dot'></span>
     <span><strong>48+ Verified Jobs</strong> Live Today</span>
     <span style='background:#2563eb;color:#fff;border-radius:12px;padding:2px 8px;font-size:0.75rem;margin-left:4px;'>Browse &#8594;</span>
+  </div>
+
+  <!-- Sticky WhatsApp Daily Job Alert Floating Widget -->
+  <div class='jm-wa-floating-btn' id='jm-wa-float' onclick='openWhatsAppModal()'>
+    <span style='font-size:1.15rem;'>💬</span>
+    <span>Daily Jobs Alert <strong>(12.4k+)</strong></span>
+  </div>
+
+  <!-- WhatsApp Community Modal -->
+  <div class='jm-modal' id='jm-wa-modal' aria-hidden='true'>
+    <div class='jm-modal-box' style='max-width:440px;text-align:center;'>
+      <div style='display:flex;justify-content:flex-end;'>
+        <button class='jm-modal-close' id='jm-wa-close' type='button'>&#215;</button>
+      </div>
+      <div style='width:56px;height:56px;background:#ecfdf5;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;font-size:28px;'>
+        💬
+      </div>
+      <h3 style='margin:0 0 8px;font-size:1.25rem;font-weight:700;'>Join Daily Jobs WhatsApp Channel</h3>
+      <p style='color:#64748b;font-size:0.88rem;margin:0 0 18px;'>
+        Get instant WhatsApp notifications when new verified work-from-home, data entry, and remote jobs are posted!
+      </p>
+      <div style='display:flex;flex-direction:column;gap:10px;'>
+        <a class='jm-btn' href='https://whatsapp.com/channel/0029VaExample' id='jm-wa-join-btn' target='_blank' rel='noopener noreferrer' style='background:#25d366;color:#ffffff;font-weight:700;padding:12px 20px;border-radius:10px;text-decoration:none;'>
+          Join Official WhatsApp Channel &#8594;
+        </a>
+        <button class='jm-btn jm-btn-outline' id='jm-wa-share-btn' type='button' style='border-color:#cbd5e1;color:#475569;'>
+          Share Website With Friends
+        </button>
+      </div>
+      <p style='font-size:0.75rem;color:#94a3b8;margin-top:14px;'>100% Free &#8226; Zero Spam &#8226; Scam-Verified Openings</p>
+    </div>
   </div>
 
   <script type='text/javascript'>
@@ -1809,6 +2083,36 @@
       modal.setAttribute("aria-hidden", "false");
     }
 
+    function quickFilterSearch(keyword) {
+      var input = document.getElementById("jm-search-input");
+      if (input) {
+        input.value = keyword;
+        currentPage = 1;
+        renderFilteredJobs();
+        var board = document.getElementById("jobs-board");
+        if (board) board.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+    window.quickFilterSearch = quickFilterSearch;
+
+    function openWhatsAppModal() {
+      var m = document.getElementById("jm-wa-modal");
+      if (m) {
+        m.classList.add("open");
+        m.setAttribute("aria-hidden", "false");
+      }
+    }
+    window.openWhatsAppModal = openWhatsAppModal;
+
+    function closeWhatsAppModal() {
+      var m = document.getElementById("jm-wa-modal");
+      if (m) {
+        m.classList.remove("open");
+        m.setAttribute("aria-hidden", "true");
+      }
+    }
+    window.closeWhatsAppModal = closeWhatsAppModal;
+
     function updateSalaryCalc() {
       var amtEl = document.getElementById("jm-sal-amount");
       var curEl = document.getElementById("jm-sal-currency");
@@ -1919,6 +2223,29 @@
         atsBtn.onclick = function () {
           storageSet("jm_user_skills", atsIn.value || "");
           document.getElementById("jm-ats-result").textContent = "Saved! Open any job card now to see your personal ATS match.";
+        };
+      }
+
+      var waClose = document.getElementById("jm-wa-close");
+      var waModal = document.getElementById("jm-wa-modal");
+      if (waClose) waClose.onclick = closeWhatsAppModal;
+      if (waModal) {
+        waModal.onclick = function (e) {
+          if (e.target === waModal) closeWhatsAppModal();
+        };
+      }
+      var waShare = document.getElementById("jm-wa-share-btn");
+      if (waShare) {
+        waShare.onclick = function () {
+          var shareText = "🚀 Find verified daily online & remote jobs in Pakistan without scams: " + window.location.href;
+          window.open("https://api.whatsapp.com/send?text=" + encodeURIComponent(shareText), "_blank");
+        };
+      }
+      var communityLink = document.getElementById("jm-community-link");
+      if (communityLink) {
+        communityLink.onclick = function (e) {
+          e.preventDefault();
+          openWhatsAppModal();
         };
       }
     }
