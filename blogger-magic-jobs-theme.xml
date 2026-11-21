@@ -1240,7 +1240,7 @@
       modalSponsorUrl: "" // Optional HTTPS sponsor URL (clearly labeled Sponsored)
     };
 
-    var ADSTERRA_BANNER_SRCDOC = "<!DOCTYPE html><html><head><style>body{margin:0;padding:0;display:flex;justify-content:center;align-items:center;background:transparent;overflow:hidden;}</style></head><body><script type='text/javascript'>atOptions = {'key' : 'd872e9a91466c384b1b126f146a960cf', 'format' : 'iframe', 'height' : 90, 'width' : 728, 'params' : {}};</script><script type='text/javascript' src='https://www.highperformanceformat.com/d872e9a91466c384b1b126f146a960cf/invoke.js'></script></body></html>";
+    var ADSTERRA_BANNER_SRCDOC = "<!DOCTYPE html><html><head><style>body{margin:0;padding:0;display:flex;justify-content:center;align-items:center;background:transparent;overflow:hidden;}</style></head><body><scr" + "ipt type='text/javascript'>atOptions = {'key' : 'd872e9a91466c384b1b126f146a960cf', 'format' : 'iframe', 'height' : 90, 'width' : 728, 'params' : {}};</scr" + "ipt><scr" + "ipt type='text/javascript' src='https://www.highperformanceformat.com/d872e9a91466c384b1b126f146a960cf/invoke.js'></scr" + "ipt></body></html>";
 
     function renderAdsterraBanner(target, scale) {
       if (!target) return;
