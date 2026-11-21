@@ -695,10 +695,67 @@
     .jm-footer {
       background: #070b14;
       color: #94a3b8;
-      padding: 28px 0;
+      padding: 28px 0 34px;
       margin-top: 32px;
       font-size: 0.86rem;
       text-align: center;
+    }
+
+    .jm-footer-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px 18px;
+      margin-bottom: 14px;
+    }
+
+    .jm-footer-links a {
+      color: #e2e8f0;
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+    .jm-footer-links a:hover {
+      color: #34d399;
+      text-decoration: underline;
+    }
+
+    .jm-footer-disclaimer {
+      max-width: 780px;
+      margin: 12px auto 0;
+      padding: 10px 14px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 10px;
+      font-size: 0.76rem;
+      color: #94a3b8;
+      line-height: 1.5;
+    }
+
+    .jm-cookie-bar {
+      position: fixed;
+      bottom: 16px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: min(760px, 94vw);
+      background: #0f172a;
+      color: #e2e8f0;
+      border: 1px solid #334155;
+      border-radius: 12px;
+      padding: 12px 16px;
+      box-shadow: 0 12px 32px rgba(2, 6, 23, 0.45);
+      display: none;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+      font-size: 0.81rem;
+      z-index: 9999;
+    }
+
+    .jm-cookie-bar.open {
+      display: flex;
     }
 
     .jm-floating-alert {
@@ -888,9 +945,11 @@
       </a>
       <div class='jm-nav-links'>
         <a expr:href='data:blog.homepageUrl'>All Jobs</a>
-        <a href='#salary-calc-box'>Salary PKR Calc</a>
-        <a href='#scam-shield-tool'>Scam Checker</a>
-        <a href='#ats-helper-tool'>ATS Helper</a>
+        <a expr:href='data:blog.homepageUrl + "#salary-calc-box"'>Salary PKR Calc</a>
+        <a expr:href='data:blog.homepageUrl + "#scam-shield-tool"'>Scam Checker</a>
+        <a expr:href='data:blog.homepageUrl + "#ats-helper-tool"'>ATS Helper</a>
+        <a expr:href='data:blog.homepageUrl + "p/about-us.html"'>About</a>
+        <a expr:href='data:blog.homepageUrl + "p/contact-us.html"'>Contact</a>
         <button class='jm-nav-btn jm-saved-pill' id='jm-saved-toggle-btn' type='button'>Saved (0)</button>
         <a id='jm-community-link' href='#jobs-board'>Join Alerts</a>
       </div>
@@ -1057,7 +1116,40 @@
     <b:section class='main' id='main' showaddelement='yes'>
       <b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog' version='2'>
         <b:includable id='main' var='this'>
-          <b:if cond='not data:view.isHomepage'>
+          <b:if cond='data:view.isError'>
+            <article class='jm-single-post' style='text-align:center;'>
+              <h1 style='margin:0 0 10px;font-size:1.75rem;'>Page Not Found (404)</h1>
+              <p style='color:#475569;margin:0 0 18px;'>
+                The page or job listing you requested may have moved or expired. Browse active verified openings below.
+              </p>
+              <a class='jm-btn jm-btn-primary' expr:href='data:blog.homepageUrl'>
+                &#8592; Return to Live Job Board
+              </a>
+            </article>
+          <b:elseif cond='data:view.isPage'/>
+            <b:loop values='data:posts' var='post'>
+              <article class='jm-single-post'>
+                <nav aria-label='Breadcrumb' class='jm-breadcrumb'>
+                  <a expr:href='data:blog.homepageUrl'>Home</a>
+                  <span>&#8250;</span>
+                  <span><data:post.title/></span>
+                </nav>
+                <h1 class='jm-single-title' style='margin:0 0 14px;font-size:1.75rem;line-height:1.25;'><data:post.title/></h1>
+                <div class='post-body'>
+                  <data:post.body/>
+                </div>
+                <div class='jm-single-cta-box'>
+                  <div>
+                    <strong style='display:block;color:#065f46;font-size:0.96rem;'>Ready to Explore Verified Jobs?</strong>
+                    <span style='font-size:0.84rem;color:#334155;'>Return to the Rozgar News Hub board to search remote, student, and tech roles.</span>
+                  </div>
+                  <a class='jm-btn jm-btn-primary' expr:href='data:blog.homepageUrl'>
+                    Browse Live Jobs &#8594;
+                  </a>
+                </div>
+              </article>
+            </b:loop>
+          <b:elseif cond='not data:view.isHomepage'/>
             <b:loop values='data:posts' var='post'>
               <article class='jm-single-post'>
                 <nav aria-label='Breadcrumb' class='jm-breadcrumb'>
@@ -1296,10 +1388,30 @@
 
   <footer class='jm-footer'>
     <div class='jm-container'>
+      <nav aria-label='Footer Navigation' class='jm-footer-links'>
+        <a expr:href='data:blog.homepageUrl'>Home</a>
+        <a expr:href='data:blog.homepageUrl + "p/about-us.html"'>About Us</a>
+        <a expr:href='data:blog.homepageUrl + "p/contact-us.html"'>Contact Us</a>
+        <a expr:href='data:blog.homepageUrl + "p/privacy-policy.html"'>Privacy Policy</a>
+        <a expr:href='data:blog.homepageUrl + "p/terms-and-disclaimer.html"'>Terms &amp; Disclaimer</a>
+        <a expr:href='data:blog.homepageUrl + "sitemap.xml"'>Sitemap</a>
+      </nav>
       <p style='margin:0 0 6px;'>&#169; 2026 <data:blog.title/> &#8226; Verified Remote &amp; Digital Careers</p>
       <p style='margin:0;font-size:0.78rem;'>Transparent Advertising &#8226; Zero Fake Apply Traps &#8226; Always verify employer domains.</p>
+      <div class='jm-footer-disclaimer'>
+        <strong>Career Portal Disclaimer:</strong> <data:blog.title/> is an independent informational job directory and is not affiliated with any government department or private recruitment agency. We do not charge registration, test, or security fees. Always apply only through verified official employer websites.
+      </div>
     </div>
   </footer>
+
+  <!-- AdSense / GDPR Cookie Consent Bar -->
+  <div aria-live='polite' class='jm-cookie-bar' id='jm-cookie-bar' role='region'>
+    <span>
+      We use essential local storage and third-party advertising cookies to improve job search relevance and keep this portal 100% free.
+      <a expr:href='data:blog.homepageUrl + "p/privacy-policy.html"' style='color:#34d399;text-decoration:underline;margin-left:4px;'>Privacy Policy</a>
+    </span>
+    <button class='jm-btn jm-btn-primary' id='jm-cookie-accept' style='padding:6px 14px;font-size:0.8rem;' type='button'>Got It</button>
+  </div>
 
   <!-- Floating Live Hiring Alert Pill (Sticky Social Bar Trigger) -->
   <div class='jm-floating-alert' id='jm-live-pill' onclick="var b=document.getElementById('jobs-board');if(b){b.scrollIntoView({behavior:'smooth'});}else{window.location.href='/';}">
@@ -1323,14 +1435,14 @@
       <div style='width:56px;height:56px;background:#ecfdf5;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;font-size:28px;'>
         💬
       </div>
-      <h3 style='margin:0 0 8px;font-size:1.25rem;font-weight:700;'>Join Daily Jobs WhatsApp Channel</h3>
+      <h3 style='margin:0 0 8px;font-size:1.25rem;font-weight:700;'>Get Daily Verified Job Alerts</h3>
       <p style='color:#64748b;font-size:0.88rem;margin:0 0 18px;'>
-        Get instant WhatsApp notifications when new verified work-from-home, data entry, and remote jobs are posted!
+        Stay updated with newly verified work-from-home, student part-time, typing, and remote tech jobs!
       </p>
       <div style='display:flex;flex-direction:column;gap:10px;'>
-        <a class='jm-btn' href='https://whatsapp.com/channel/0029VaExample' id='jm-wa-join-btn' target='_blank' rel='noopener noreferrer' style='background:#25d366;color:#ffffff;font-weight:700;padding:12px 20px;border-radius:10px;text-decoration:none;'>
-          Join Official WhatsApp Channel &#8594;
-        </a>
+        <button class='jm-btn' id='jm-wa-join-btn' type='button' style='background:#25d366;color:#ffffff;font-weight:700;padding:12px 20px;border-radius:10px;border:none;cursor:pointer;'>
+          Share &amp; Save Portal via WhatsApp &#8594;
+        </button>
         <button class='jm-btn jm-btn-outline' id='jm-wa-share-btn' type='button' style='border-color:#cbd5e1;color:#475569;'>
           Share Website With Friends
         </button>
@@ -1352,10 +1464,13 @@
       siteUrl: "https://rozgarnewshub.blogspot.com",
       externalFeedUrl: "https://hamzazayan078.github.io/rozgar-news-jobs/jobs.json",
       bloggerFeedUrl: "/feeds/posts/default?alt=json&max-results=40",
-      communityAlertUrl: "#scam-shield-tool", // Put your WhatsApp or Telegram Channel link here
+      communityAlertUrl: "#scam-shield-tool", // Or set your official WhatsApp / Telegram Channel link
+      whatsappChannelUrl: "", // Put your real https://whatsapp.com/channel/... invite link here when ready
       cvOrderUrl: "#ats-helper-tool", // Put "https://wa.me/923XXXXXXXXX?text=I%20want%20ATS%20CV" here
       jobsPerPage: 6,
       inFeedAdEvery: 4,
+      // Set to true before submitting to Google AdSense review to run clean direct links & zero third-party banners:
+      adsenseReviewMode: false,
       // Optional Smart Direct Link (Adsterra / Monetag) for high-CPM conversion on Apply clicks:
       directLinkUrl: "",
       // Optional clean sponsored CTA inside the Job Modal (e.g. Monetag/Adsterra smartlink or affiliate banner):
@@ -1366,7 +1481,7 @@
     var ADSTERRA_BANNER_SRCDOC = "<!DOCTYPE html><html><head><style>body{margin:0;padding:0;display:flex;justify-content:center;align-items:center;background:transparent;overflow:hidden;}</style></head><body><scr" + "ipt type='text/javascript'>atOptions = {'key' : 'd872e9a91466c384b1b126f146a960cf', 'format' : 'iframe', 'height' : 90, 'width' : 728, 'params' : {}};</scr" + "ipt><scr" + "ipt type='text/javascript' src='https://www.highperformanceformat.com/d872e9a91466c384b1b126f146a960cf/invoke.js'></scr" + "ipt></body></html>";
 
     function renderAdsterraBanner(target, scale) {
-      if (!target) return;
+      if (!target || CONFIG.adsenseReviewMode) return;
       var el = typeof target === "string" ? document.getElementById(target) : target;
       if (!el) return;
       var ifr = document.createElement("iframe");
@@ -1383,6 +1498,12 @@
     window.renderAdsterraBanner = renderAdsterraBanner;
 
     function initAllBanners() {
+      if (CONFIG.adsenseReviewMode) {
+        document.querySelectorAll(".jm-ad-wrapper").forEach(function (w) {
+          w.style.display = "none";
+        });
+        return;
+      }
       renderAdsterraBanner("jm-ad-top-slot");
       renderAdsterraBanner("jm-ad-mid-slot");
       renderAdsterraBanner("jm-ad-sidebar-slot", 0.44);
@@ -1616,6 +1737,10 @@
 
     function openVerificationModal(job) {
       if (!job) return;
+      if (CONFIG.adsenseReviewMode) {
+        if (isSafeUrl(job.url)) window.open(job.url, "_blank", "noopener,noreferrer");
+        return;
+      }
       targetVerifiedJob = job;
       var modal = document.getElementById("jm-verify-modal");
       if (!modal) {
@@ -2091,7 +2216,7 @@
         card.querySelector(".jm-apply-btn").onclick = function (e) { handleApplyClick(e, job); };
         grid.appendChild(card);
 
-        if ((idx + 1) % CONFIG.inFeedAdEvery === 0 && idx + 1 < pageItems.length) {
+        if (!CONFIG.adsenseReviewMode && (idx + 1) % CONFIG.inFeedAdEvery === 0 && idx + 1 < pageItems.length) {
           var adBox = document.createElement("div");
           adBox.className = "jm-ad-wrapper jm-infeed-ad";
 
@@ -2342,6 +2467,20 @@
           if (e.target === waModal) closeWhatsAppModal();
         };
       }
+      var waJoin = document.getElementById("jm-wa-join-btn");
+      if (waJoin) {
+        if (isSafeUrl(CONFIG.whatsappChannelUrl)) {
+          waJoin.textContent = "Join Official WhatsApp Channel →";
+        }
+        waJoin.onclick = function () {
+          if (isSafeUrl(CONFIG.whatsappChannelUrl)) {
+            window.open(CONFIG.whatsappChannelUrl, "_blank", "noopener,noreferrer");
+          } else {
+            var inviteText = "📌 Daily Verified Online & Remote Jobs in Pakistan (Zero Fee): " + window.location.origin;
+            window.open("https://api.whatsapp.com/send?text=" + encodeURIComponent(inviteText), "_blank");
+          }
+        };
+      }
       var waShare = document.getElementById("jm-wa-share-btn");
       if (waShare) {
         waShare.onclick = function () {
@@ -2354,6 +2493,18 @@
         communityLink.onclick = function (e) {
           e.preventDefault();
           openWhatsAppModal();
+        };
+      }
+
+      var cookieBar = document.getElementById("jm-cookie-bar");
+      var cookieBtn = document.getElementById("jm-cookie-accept");
+      if (cookieBar && storageGet("jm_cookie_ok", "") !== "1") {
+        cookieBar.classList.add("open");
+      }
+      if (cookieBtn && cookieBar) {
+        cookieBtn.onclick = function () {
+          storageSet("jm_cookie_ok", "1");
+          cookieBar.classList.remove("open");
         };
       }
     }
