@@ -1126,9 +1126,22 @@ def export_standalone_preview(theme_xml_path: Path, output_html_path: Path) -> N
     html_out = html_out.replace("<b:include data='blog' name='all-head-content'/>", "")
     html_out = html_out.replace("<b:skin><![CDATA[", "<style>").replace("]]></b:skin>", "</style>")
     html_out = html_out.replace("<data:blog.title/>", html.escape(DEFAULT_SITE_NAME))
+    html_out = re.sub(
+        r"expr:href='data:blog\.homepageUrl \+ \"([^\"]+)\"'",
+        lambda m: f"href='{html.escape(DEFAULT_SITE_URL)}/{m.group(1)}'",
+        html_out,
+    )
     html_out = html_out.replace("expr:href='data:blog.homepageUrl'", "href='#'")
+    html_out = html_out.replace("expr:content='data:blog.canonicalUrl'", f"content='{html.escape(DEFAULT_SITE_URL)}/'")
 
-    # Remove Blogger conditional wrappers around homepage and strip the Blogger-only Blog1 section.
+    # Keep only the homepage branch of multi-branch Blogger <head> SEO conditionals.
+    html_out = re.sub(
+        r"<b:if cond='data:view\.isHomepage'>([\s\S]*?)<b:elseif\b[\s\S]*?</b:if>",
+        r"\1",
+        html_out,
+    )
+
+    # Remove Blogger conditional wrappers around homepage sections and strip the Blogger-only Blog1 section.
     html_out = html_out.replace("<b:if cond='data:view.isHomepage'>", "")
     html_out = re.sub(
         r"<!-- Required Blogger Section & Blog1 Widget.*?<!-- Job Detail Modal",
@@ -1137,8 +1150,9 @@ def export_standalone_preview(theme_xml_path: Path, output_html_path: Path) -> N
         count=1,
         flags=re.S,
     )
-    # Remove the closing </b:if> left right before the Blog1 section marker and strip standalone ad b:section tags.
+    # Remove closing </b:if> tags left before modal / footer after unwrapping homepage sections.
     html_out = html_out.replace("</b:if>\n\n  <!-- Job Detail Modal", "<!-- Job Detail Modal")
+    html_out = re.sub(r"\s*</b:if>\s*(?=<footer\b)", "\n\n  ", html_out)
     html_out = re.sub(r"<b:section\b[^>]*/>", "", html_out)
     html_out = html_out.replace("//<![CDATA[", "").replace("//]]>", "")
     html_out = re.sub(
