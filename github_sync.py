@@ -14,7 +14,9 @@ from __future__ import annotations
 
 import argparse
 import base64
+import http.client
 import json
+import time
 import os
 from pathlib import Path
 import sys
@@ -23,7 +25,7 @@ import urllib.parse
 import urllib.request
 
 API_BASE = "https://api.github.com"
-TIMEOUT_SECONDS = 20
+TIMEOUT_SECONDS = 60
 
 # Only push source, workflow, docs, state, and README files (skip __pycache__ / local tools).
 SYNC_INCLUDE_PATHS = [
@@ -59,9 +61,16 @@ def github_request(
         headers["Content-Type"] = "application/json"
 
     req = urllib.request.Request(url, data=data, headers=headers, method=method)
-    with urllib.request.urlopen(req, timeout=TIMEOUT_SECONDS) as resp:
-        raw = resp.read().decode("utf-8")
-        return json.loads(raw) if raw else {}
+    for attempt in range(3):
+        try:
+            with urllib.request.urlopen(req, timeout=TIMEOUT_SECONDS) as resp:
+                raw = resp.read().decode("utf-8")
+                return json.loads(raw) if raw else {}
+        except (urllib.error.URLError, TimeoutError, http.client.RemoteDisconnected) as e:
+            if attempt < 2:
+                time.sleep(2 * (attempt + 1))
+                continue
+            raise
 
 
 def get_existing_file_sha(owner: str, repo: str, repo_path: str, branch: str, token: str) -> str | None:
