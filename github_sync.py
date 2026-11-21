@@ -39,6 +39,7 @@ SYNC_INCLUDE_PATHS = [
     "github_sync.py",
     "MONETIZATION_GUIDE.md",
     "README.md",
+    "SEO_BLOG_POSTS.md",
     "test_auto_job_magic.py",
 ]
 
