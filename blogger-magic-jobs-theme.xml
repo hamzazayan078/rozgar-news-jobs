@@ -1488,6 +1488,8 @@
       var ifr = document.createElement("iframe");
       ifr.style.cssText = "width:728px;height:90px;border:none;overflow:hidden;max-width:100%;display:block;margin:0 auto;";
       if (scale) {
+        ifr.style.maxWidth = "none";
+        ifr.style.flexShrink = "0";
         ifr.style.transform = "scale(" + scale + ")";
         ifr.style.transformOrigin = "center top";
       }
@@ -1495,6 +1497,38 @@
       ifr.srcdoc = ADSTERRA_BANNER_SRCDOC;
       el.innerHTML = "";
       el.appendChild(ifr);
+
+      // Collapse empty "ADVERTISEMENT" gap gracefully if a visitor's VPN/AdBlocker blocks the banner CDN
+      setTimeout(function () {
+        try {
+          if (!document.body.contains(el)) return;
+          var doc = ifr.contentDocument || (ifr.contentWindow && ifr.contentWindow.document);
+          if (!doc || !doc.body) return;
+          var nestedIfr = doc.body.querySelector("iframe");
+          var hasImg = false;
+          if (doc.body.querySelector("img, a")) hasImg = true;
+          if (!hasImg && nestedIfr) {
+            try {
+              var nDoc = nestedIfr.contentDocument || (nestedIfr.contentWindow && nestedIfr.contentWindow.document);
+              if (nDoc && nDoc.body && nDoc.body.querySelector("img, a, div")) hasImg = true;
+            } catch (eNested) {
+              if (nestedIfr.offsetHeight > 20) hasImg = true;
+            }
+          }
+          if (!hasImg) {
+            el.style.minHeight = "0";
+            el.style.height = "0";
+            el.style.margin = "0";
+            var wrap = el.closest(".jm-ad-wrapper");
+            if (wrap) {
+              var lbl = wrap.querySelector(".jm-ad-label");
+              if (lbl) lbl.style.display = "none";
+              wrap.style.margin = "0";
+              wrap.style.padding = "0";
+            }
+          }
+        } catch (errCheck) {}
+      }, 6500);
     }
     window.renderAdsterraBanner = renderAdsterraBanner;
 
